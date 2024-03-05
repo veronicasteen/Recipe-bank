@@ -11,27 +11,33 @@
 </head>
 
 <body>
-    <main>
-        <header>
     <div id="app">
-        <h1>Recipe Bank</h1>
+        <main>
+            <header>
+                <h1>Recipe Bank</h1>
+            </header>
+            <nav>
+                <!-- Länka till index sida
+                Länka till inköpssida -->
+            </nav>
+            <section>
+                <h2>Categories:</h2>
+                <div class="button-section">
+                    <button @click="getStarters">Starters</button>
+                    <button @click="getMainCourses">Main Courses</button>
+                    <button @click="getDesserts">Desserts</button>
+                </div>
+            </section>
+            <div v-if="showRecipes">
+                <div v-for="recipe in recipes" :key="recipe.id">
+                    <h3>{{ recipe.title }}</h3>
+                    <p>Ingredients: {{ recipe.ingredients.join(', ') }}</p>
+                    <p>Meal Type: {{ recipe.mealType }}</p>
+                    <img :src="recipe.image" alt="Recipe Image" />
+                </div>
+            </div>
+        </main>
     </div>
-</header>
-<nav>
-    <!-- Länka till index sida
-    Länka till inköpssida -->
-</nav>
-<section>
-    <h2>Categories:</h2>
-    <div class = "button-section">
-    <button class="meal-category">Starters</button>
-    <button class="meal-category">Main courses</button>
-    <button class="meal-category">Desserts</button>
-</div>
-</section>
-<div class = "category-container">
-</div>
-</main>
 </body>
 
 </html>
