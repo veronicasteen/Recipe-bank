@@ -37,10 +37,10 @@
       },
       {
         "id": 6,
-        "title": "Mushroom Bruschetta",
-        "ingredients": ["Mushrooms", "Garlic", "Thyme", "Olive Oil", "Baguette"],
+        "title": "Fried Mushrooms",
+        "ingredients": ["Mushrooms", "Garlic", "Thyme", "Olive Oil"],
         "mealType": "starter",
-        "image": "mushroom_bruschetta.jpg"
+        "image": "fried_mushroom.jpg"
       },
       {
         "id": 7,
@@ -107,10 +107,10 @@
       },
       {
         "id": 16,
-        "title": "Lemon Bars",
-        "ingredients": ["Butter", "Flour", "Sugar", "Eggs", "Lemon Juice", "Powdered Sugar"],
+        "title": "Chocolate Ice Cream",
+        "ingredients": ["Chocolate Ice Cream", "Blueberries", "Cashew nuts"],
         "mealType": "dessert",
-        "image": "lemon_bars.jpg"
+        "image": "chocolate_ice_cream.jpg"
       },
       {
         "id": 17,
