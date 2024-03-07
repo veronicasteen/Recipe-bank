@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="shopping-list" v-if="showShoppingList">
-                    <h4>Inköpslista:</h4>
+                    <h4>Shopping list:</h4>
                     <div v-for="item in shoppingBag" :key="item.title">
                         <h5>{{ item.title }}</h5>
                         <label :for="item.title">
@@ -46,7 +46,7 @@
                     </div>
                     <!-- Gör samma sak här som på todo-mvc att man kan markera och ta bort en eller alla -->
                     <button @click = "checkAll">Mark all</button>
-                    <button @click = "removeCheckedItem(item)">Remove items</button>
+                    <button @click = "removeCheckedItems">Remove items</button>
                 </div>
             </section>
         </main>

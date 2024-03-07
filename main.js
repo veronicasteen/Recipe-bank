@@ -5,7 +5,7 @@ let app = Vue.createApp({
             showRecipes: false,
             showShoppingList: false, // Lägg till en flagga för att visa/ gömma inköpslistan
             shoppingBag: [],
-            
+
         };
     },
 
@@ -25,21 +25,26 @@ let app = Vue.createApp({
         },
         async fetchRecipes(category) {
 
-            let response = await fetch('recipes.json'); 
+            let response = await fetch('recipes.json');
             let data = await response.json();
             this.recipes = data.recipes.filter(recipe => recipe.mealType === category);
-            
+
             this.showRecipes = true;
         },
-       addToShoppingBag({ title, ingredients }) {
-    const newItem = {
-        title: title,
-        ingredients: ingredients,
-        checked: false,
-    };
-    this.shoppingBag.push(newItem);
-    this.showShoppingList = true;
-}
+        addToShoppingBag({ title, ingredients }) {
+            const newItem = {
+                title: title,
+                ingredients: ingredients,
+                checked: false,
+            };
+            this.shoppingBag.push(newItem);
+            this.showShoppingList = true;
+        },
+
+        removeCheckedItems() {
+            // Ta bort endast de markerade objekten
+            this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
+        },
     }
 });
 
