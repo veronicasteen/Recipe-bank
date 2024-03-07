@@ -8,6 +8,10 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Parisienne&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Sofia&display=swap" rel="stylesheet">
 </head>
  
 <body>
@@ -28,7 +32,10 @@
                 <div v-if="showRecipes" class="recipe-section">
                     <div v-for="recipe in recipes" :key="recipe.id">
                         <h3>{{ recipe.title }}</h3>
-                        <button @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Lägg till</button>
+                        <div class="image-container">
+                        <img :src="getImagePath(recipe.image)" alt="Recipe Image" />
+                        <button id="add-button" @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Lägg till</button>
+                        </div>
                     </div>
                 </div>
                 <div class="shopping-list" v-if="showShoppingList">
