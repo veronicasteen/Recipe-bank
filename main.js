@@ -10,6 +10,10 @@ let app = Vue.createApp({
     },
 
     methods: {
+        getImagePath(imageFileName) {
+            // Om bilderna ligger i en separat mapp, använd sökvägen:
+            return `./foodImages/${imageFileName}`;
+        },
         async getStarters() {
             await this.fetchRecipes('starter');
         },
