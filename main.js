@@ -5,15 +5,19 @@ let app = Vue.createApp({
             showRecipes: false,
             showShoppingList: false, // Lägg till en flagga för att visa/ gömma inköpslistan
             shoppingBag: [],
-
+            isAllergenInfoActive: false,
         };
     },
 
     methods: {
+
+        //metod för att hämta bilderna från bild-mappen
         getImagePath(imageFileName) {
-            // Om bilderna ligger i en separat mapp, använd sökvägen:
+
             return `./foodImages/${imageFileName}`;
         },
+
+        //metoder för att fetcha från json-filen och hitta recept
         async getStarters() {
             await this.fetchRecipes('starter');
         },
@@ -31,6 +35,8 @@ let app = Vue.createApp({
 
             this.showRecipes = true;
         },
+
+        //metod för att lägga till titel osv i shoppinglistan
         addToShoppingBag({ title, ingredients }) {
             const newItem = {
                 title: title,
@@ -40,9 +46,14 @@ let app = Vue.createApp({
             this.shoppingBag.push(newItem);
             this.showShoppingList = true;
         },
+        //metod för att checka i eller ur checkboxen i shoppinglistan
+        toggleCheckbox(item) {
 
+            item.checked = !item.checked;
+        },
+        
+        //metod för att ta bort icheckade items
         removeCheckedItems() {
-            // Ta bort endast de markerade objekten
             this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
 
             if (this.shoppingBag.length === 0) {
@@ -50,11 +61,16 @@ let app = Vue.createApp({
             }
         },
 
+        //metod för att checka i alla items i shoppinglistan
         checkAll() {
-            // Markera eller avmarkera alla objekt beroende på nuvarande status
-            const allChecked = this.shoppingBag.every(item => item.checked);
+            let allChecked = this.shoppingBag.every(item => item.checked);
             this.shoppingBag.forEach(item => (item.checked = !allChecked));
         },
+
+        //metod för att antingen visa eller avaktivera allergi-information
+        toggleAllergenInfo() {
+            this.isAllergenInfoActive = !this.isAllergenInfoActive;
+          },
     }
 });
 

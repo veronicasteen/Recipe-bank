@@ -6,6 +6,7 @@
       "ingredients": ["Tomatoes", "Fresh Mozzarella", "Basil", "Olive Oil", "Balsamic Vinegar", "Salt", "Pepper"],
       "mealType": "starter",
       "allergens": ["Milk"],
+      "preparationTime": "15 minutes",
       "image": "caprese_salad.jpg"
     },
     {
@@ -14,6 +15,7 @@
       "ingredients": ["Tomatoes", "Garlic", "Basil", "Olive Oil", "Balsamic Vinegar", "Baguette"],
       "mealType": "starter",
       "allergens": ["Gluten"],
+      "preparationTime": "20 minutes",
       "image": "bruschetta.jpg"
     },
     {
@@ -22,6 +24,7 @@
       "ingredients": ["Spinach", "Artichoke Hearts", "Cream Cheese", "Sour Cream", "Parmesan", "Garlic", "Tortilla Chips"],
       "mealType": "starter",
       "allergens": ["Milk"],
+      "preparationTime": "30 minutes",
       "image": "spinach_artichoke_dip.jpg"
     },
     {
@@ -30,6 +33,7 @@
       "ingredients": ["Romaine Lettuce", "Grilled Chicken", "Croutons", "Parmesan", "Caesar Dressing"],
       "mealType": "starter",
       "allergens": ["Gluten", "Egg"],
+      "preparationTime": "25 minutes",
       "image": "caesar_salad.jpg"
     },
     {
@@ -38,6 +42,7 @@
       "ingredients": ["Shrimp", "Cocktail Sauce", "Lemon Wedges"],
       "mealType": "starter",
       "allergens": ["Crustacean"],
+      "preparationTime": "15 minutes",
       "image": "shrimp_cocktail.jpg"
     },
     {
@@ -45,6 +50,7 @@
       "title": "Fried Mushrooms",
       "ingredients": ["Mushrooms", "Garlic", "Thyme", "Olive Oil"],
       "mealType": "starter",
+      "preparationTime": "20 minutes",
       "image": "fried_mushroom.jpg"
     },
     {
@@ -53,6 +59,7 @@
       "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onions", "Garlic", "Oregano"],
       "mealType": "main course",
       "allergens": ["Gluten"],
+      "preparationTime": "40 minutes",
       "image": "spaghetti_bolognese.jpg"
     },
     {
@@ -60,6 +67,7 @@
       "title": "Grilled Salmon",
       "ingredients": ["Salmon Fillets", "Lemon", "Dill", "Olive Oil", "Salt", "Pepper"],
       "mealType": "main course",
+      "preparationTime": "30 minutes",
       "image": "grilled_salmon.jpg"
     },
     {
@@ -68,6 +76,7 @@
       "ingredients": ["Fettuccine Pasta", "Chicken Breast", "Heavy Cream", "Parmesan", "Butter", "Garlic"],
       "mealType": "main course",
       "allergens": ["Milk", "Gluten"],
+      "preparationTime": "35 minutes",
       "image": "chicken_alfredo.jpg"
     },
     {
@@ -76,6 +85,7 @@
       "ingredients": ["Pizza Dough", "Tomato Sauce", "Mozzarella", "Bell Peppers", "Onions", "Olives"],
       "mealType": "main course",
       "allergens": ["Gluten", "Milk"],
+      "preparationTime": "25 minutes",
       "image": "vegetarian_pizza.jpg"
     },
     {
@@ -84,6 +94,7 @@
       "ingredients": ["Beef Strips", "Broccoli", "Bell Peppers", "Soy Sauce", "Ginger", "Garlic", "Rice"],
       "mealType": "main course",
       "allergens": ["Soy"],
+      "preparationTime": "30 minutes",
       "image": "beef_stir_fry.jpg"
     },
     {
@@ -92,6 +103,7 @@
       "ingredients": ["Penne Pasta", "Basil Pesto", "Cherry Tomatoes", "Parmesan", "Olive Oil"],
       "mealType": "main course",
       "allergens": ["Nuts"],
+      "preparationTime": "20 minutes",
       "image": "pesto_pasta.jpg"
     },
     {
@@ -100,6 +112,7 @@
       "ingredients": ["Butter", "Sugar", "Eggs", "Flour", "Cocoa Powder", "Vanilla Extract"],
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
+      "preparationTime": "40 minutes",
       "image": "chocolate_brownies.jpg"
     },
     {
@@ -108,6 +121,7 @@
       "ingredients": ["Vanilla Ice Cream", "Mixed Berries", "Honey"],
       "mealType": "dessert",
       "allergens": ["Milk"],
+      "preparationTime": "15 minutes",
       "image": "vanilla_ice_cream.jpg"
     },
     {
@@ -116,6 +130,7 @@
       "ingredients": ["Sponge Cake", "Whipped Cream", "Strawberries"],
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
+      "preparationTime": "30 minutes",
       "image": "strawberry_shortcake.jpg"
     },
     {
@@ -124,6 +139,7 @@
       "ingredients": ["Chocolate Ice Cream", "Blueberries", "Cashew nuts"],
       "mealType": "dessert",
       "allergens": ["Milk", "Nuts"],
+      "preparationTime": "25 minutes",
       "image": "chocolate_ice_cream.jpg"
     },
     {
@@ -132,6 +148,7 @@
       "ingredients": ["Ladyfingers", "Espresso", "Mascarpone Cheese", "Cocoa Powder"],
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
+      "preparationTime": "45 minutes",
       "image": "tiramisu.jpg"
     },
     {
@@ -139,9 +156,9 @@
       "title": "Fruit Salad",
       "ingredients": ["Mixed Fruits", "Honey", "Lime Juice", "Mint"],
       "mealType": "dessert",
+      "preparationTime": "15 minutes",
       "image": "fruit_salad.jpg"
     }
   ]
 }
 
-  
