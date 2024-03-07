@@ -44,6 +44,16 @@ let app = Vue.createApp({
         removeCheckedItems() {
             // Ta bort endast de markerade objekten
             this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
+
+            if (this.shoppingBag.length === 0) {
+                this.showShoppingList = false;
+            }
+        },
+
+        checkAll() {
+            // Markera eller avmarkera alla objekt beroende på nuvarande status
+            const allChecked = this.shoppingBag.every(item => item.checked);
+            this.shoppingBag.forEach(item => (item.checked = !allChecked));
         },
     }
 });

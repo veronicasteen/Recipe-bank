@@ -1,131 +1,147 @@
 {
-    "recipes": [
-      {
-        "id": 1,
-        "title": "Caprese Salad",
-        "ingredients": ["Tomatoes", "Fresh Mozzarella", "Basil", "Olive Oil", "Balsamic Vinegar", "Salt", "Pepper"],
-        "mealType": "starter",
-        "image": "caprese_salad.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Bruschetta",
-        "ingredients": ["Tomatoes", "Garlic", "Basil", "Olive Oil", "Balsamic Vinegar", "Baguette"],
-        "mealType": "starter",
-        "image": "bruschetta.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Spinach and Artichoke Dip",
-        "ingredients": ["Spinach", "Artichoke Hearts", "Cream Cheese", "Sour Cream", "Parmesan", "Garlic", "Tortilla Chips"],
-        "mealType": "starter",
-        "image": "spinach_artichoke_dip.jpg"
-      },
-      {
-        "id": 4,
-        "title": "Chicken Caesar Salad",
-        "ingredients": ["Romaine Lettuce", "Grilled Chicken", "Croutons", "Parmesan", "Caesar Dressing"],
-        "mealType": "starter",
-        "image": "caesar_salad.jpg"
-      },
-      {
-        "id": 5,
-        "title": "Shrimp Cocktail",
-        "ingredients": ["Shrimp", "Cocktail Sauce", "Lemon Wedges"],
-        "mealType": "starter",
-        "image": "shrimp_cocktail.jpg"
-      },
-      {
-        "id": 6,
-        "title": "Fried Mushrooms",
-        "ingredients": ["Mushrooms", "Garlic", "Thyme", "Olive Oil"],
-        "mealType": "starter",
-        "image": "fried_mushroom.jpg"
-      },
-      {
-        "id": 7,
-        "title": "Spaghetti Bolognese",
-        "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onions", "Garlic", "Oregano"],
-        "mealType": "main course",
-        "image": "spaghetti_bolognese.jpg"
-      },
-      {
-        "id": 8,
-        "title": "Grilled Salmon",
-        "ingredients": ["Salmon Fillets", "Lemon", "Dill", "Olive Oil", "Salt", "Pepper"],
-        "mealType": "main course",
-        "image": "grilled_salmon.jpg"
-      },
-      {
-        "id": 9,
-        "title": "Chicken Alfredo Pasta",
-        "ingredients": ["Fettuccine Pasta", "Chicken Breast", "Heavy Cream", "Parmesan", "Butter", "Garlic"],
-        "mealType": "main course",
-        "image": "chicken_alfredo.jpg"
-      },
-      {
-        "id": 10,
-        "title": "Vegetarian Pizza",
-        "ingredients": ["Pizza Dough", "Tomato Sauce", "Mozzarella", "Bell Peppers", "Onions", "Olives"],
-        "mealType": "main course",
-        "image": "vegetarian_pizza.jpg"
-      },
-      {
-        "id": 11,
-        "title": "Beef Stir-Fry",
-        "ingredients": ["Beef Strips", "Broccoli", "Bell Peppers", "Soy Sauce", "Ginger", "Garlic", "Rice"],
-        "mealType": "main course",
-        "image": "beef_stir_fry.jpg"
-      },
-      {
-        "id": 12,
-        "title": "Pesto Pasta with Cherry Tomatoes",
-        "ingredients": ["Penne Pasta", "Basil Pesto", "Cherry Tomatoes", "Parmesan", "Olive Oil"],
-        "mealType": "main course",
-        "image": "pesto_pasta.jpg"
-      },
-      {
-        "id": 13,
-        "title": "Chocolate Brownies",
-        "ingredients": ["Butter", "Sugar", "Eggs", "Flour", "Cocoa Powder", "Vanilla Extract"],
-        "mealType": "dessert",
-        "image": "chocolate_brownies.jpg"
-      },
-      {
-        "id": 14,
-        "title": "Vanilla Ice Cream with Berries",
-        "ingredients": ["Vanilla Ice Cream", "Mixed Berries", "Honey"],
-        "mealType": "dessert",
-        "image": "vanilla_ice_cream.jpg"
-      },
-      {
-        "id": 15,
-        "title": "Strawberry Shortcake",
-        "ingredients": ["Sponge Cake", "Whipped Cream", "Strawberries"],
-        "mealType": "dessert",
-        "image": "strawberry_shortcake.jpg"
-      },
-      {
-        "id": 16,
-        "title": "Chocolate Ice Cream",
-        "ingredients": ["Chocolate Ice Cream", "Blueberries", "Cashew nuts"],
-        "mealType": "dessert",
-        "image": "chocolate_ice_cream.jpg"
-      },
-      {
-        "id": 17,
-        "title": "Tiramisu",
-        "ingredients": ["Ladyfingers", "Espresso", "Mascarpone Cheese", "Cocoa Powder"],
-        "mealType": "dessert",
-        "image": "tiramisu.jpg"
-      },
-      {
-        "id": 18,
-        "title": "Fruit Salad",
-        "ingredients": ["Mixed Fruits", "Honey", "Lime Juice", "Mint"],
-        "mealType": "dessert",
-        "image": "fruit_salad.jpg"
-      }
-    ]
-  }
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Caprese Salad",
+      "ingredients": ["Tomatoes", "Fresh Mozzarella", "Basil", "Olive Oil", "Balsamic Vinegar", "Salt", "Pepper"],
+      "mealType": "starter",
+      "allergens": ["Milk"],
+      "image": "caprese_salad.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Bruschetta",
+      "ingredients": ["Tomatoes", "Garlic", "Basil", "Olive Oil", "Balsamic Vinegar", "Baguette"],
+      "mealType": "starter",
+      "allergens": ["Gluten"],
+      "image": "bruschetta.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Spinach and Artichoke Dip",
+      "ingredients": ["Spinach", "Artichoke Hearts", "Cream Cheese", "Sour Cream", "Parmesan", "Garlic", "Tortilla Chips"],
+      "mealType": "starter",
+      "allergens": ["Milk"],
+      "image": "spinach_artichoke_dip.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Chicken Caesar Salad",
+      "ingredients": ["Romaine Lettuce", "Grilled Chicken", "Croutons", "Parmesan", "Caesar Dressing"],
+      "mealType": "starter",
+      "allergens": ["Gluten", "Egg"],
+      "image": "caesar_salad.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Shrimp Cocktail",
+      "ingredients": ["Shrimp", "Cocktail Sauce", "Lemon Wedges"],
+      "mealType": "starter",
+      "allergens": ["Crustacean"],
+      "image": "shrimp_cocktail.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Fried Mushrooms",
+      "ingredients": ["Mushrooms", "Garlic", "Thyme", "Olive Oil"],
+      "mealType": "starter",
+      "image": "fried_mushroom.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spaghetti Bolognese",
+      "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onions", "Garlic", "Oregano"],
+      "mealType": "main course",
+      "allergens": ["Gluten"],
+      "image": "spaghetti_bolognese.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Grilled Salmon",
+      "ingredients": ["Salmon Fillets", "Lemon", "Dill", "Olive Oil", "Salt", "Pepper"],
+      "mealType": "main course",
+      "image": "grilled_salmon.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Chicken Alfredo Pasta",
+      "ingredients": ["Fettuccine Pasta", "Chicken Breast", "Heavy Cream", "Parmesan", "Butter", "Garlic"],
+      "mealType": "main course",
+      "allergens": ["Milk", "Gluten"],
+      "image": "chicken_alfredo.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Vegetarian Pizza",
+      "ingredients": ["Pizza Dough", "Tomato Sauce", "Mozzarella", "Bell Peppers", "Onions", "Olives"],
+      "mealType": "main course",
+      "allergens": ["Gluten", "Milk"],
+      "image": "vegetarian_pizza.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Beef Stir-Fry",
+      "ingredients": ["Beef Strips", "Broccoli", "Bell Peppers", "Soy Sauce", "Ginger", "Garlic", "Rice"],
+      "mealType": "main course",
+      "allergens": ["Soy"],
+      "image": "beef_stir_fry.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Pesto Pasta with Cherry Tomatoes",
+      "ingredients": ["Penne Pasta", "Basil Pesto", "Cherry Tomatoes", "Parmesan", "Olive Oil"],
+      "mealType": "main course",
+      "allergens": ["Nuts"],
+      "image": "pesto_pasta.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Chocolate Brownies",
+      "ingredients": ["Butter", "Sugar", "Eggs", "Flour", "Cocoa Powder", "Vanilla Extract"],
+      "mealType": "dessert",
+      "allergens": ["Milk", "Gluten", "Eggs"],
+      "image": "chocolate_brownies.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Vanilla Ice Cream with Berries",
+      "ingredients": ["Vanilla Ice Cream", "Mixed Berries", "Honey"],
+      "mealType": "dessert",
+      "allergens": ["Milk"],
+      "image": "vanilla_ice_cream.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Strawberry Shortcake",
+      "ingredients": ["Sponge Cake", "Whipped Cream", "Strawberries"],
+      "mealType": "dessert",
+      "allergens": ["Milk", "Gluten", "Eggs"],
+      "image": "strawberry_shortcake.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Chocolate Ice Cream",
+      "ingredients": ["Chocolate Ice Cream", "Blueberries", "Cashew nuts"],
+      "mealType": "dessert",
+      "allergens": ["Milk", "Nuts"],
+      "image": "chocolate_ice_cream.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Tiramisu",
+      "ingredients": ["Ladyfingers", "Espresso", "Mascarpone Cheese", "Cocoa Powder"],
+      "mealType": "dessert",
+      "allergens": ["Milk", "Gluten", "Eggs"],
+      "image": "tiramisu.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Fruit Salad",
+      "ingredients": ["Mixed Fruits", "Honey", "Lime Juice", "Mint"],
+      "mealType": "dessert",
+      "image": "fruit_salad.jpg"
+    }
+  ]
+}
+
   
