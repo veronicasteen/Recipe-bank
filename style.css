@@ -8,28 +8,47 @@ html{
     background-image: url(backround-image.jpg);
 }
 
-header {
-    width: 85%;
+main{
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+
+}
+
+nav li{
+   display: inline-block; 
+   
+}
+
+header {
     background-color: white;
     padding: 50px;
 }
 
 section {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    
     background-color: white;
     padding: 50px;
 }
 
 .category-container{
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+  
     background-color: white;
     padding: 50px;
+}
+
+nav{
+    background-color: white;
+}
+.recipe-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px; /* Justera gapet mellan kolumnerna efter behov */
+    background-color: white;
+}
+
+.shopping-list li{
+    list-style-type: none;
 }
 
 

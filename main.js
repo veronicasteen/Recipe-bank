@@ -3,6 +3,8 @@ let app = Vue.createApp({
         return {
             recipes: [],
             showRecipes: false,
+            showShoppingList: false, // Lägg till en flagga för att visa/ gömma inköpslistan
+            shoppingBag: [],
             
         };
     },
@@ -19,11 +21,21 @@ let app = Vue.createApp({
         },
         async fetchRecipes(category) {
 
-            const response = await fetch('recipes.json'); // Adjust the path based on your file structure
-            const data = await response.json();
+            let response = await fetch('recipes.json'); 
+            let data = await response.json();
             this.recipes = data.recipes.filter(recipe => recipe.mealType === category);
+            
             this.showRecipes = true;
-        }
+        },
+       addToShoppingBag({ title, ingredients }) {
+    const newItem = {
+        title: title,
+        ingredients: ingredients,
+        checked: false,
+    };
+    this.shoppingBag.push(newItem);
+    this.showShoppingList = true;
+}
     }
 });
 
