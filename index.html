@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
-
+ 
 <body>
     <div id="app">
         <main>
-            
             <header>
                 <h1>Recipe Bank</h1>
             </header>
-
             <section>
                 <h2>Categories:</h2>
                 <div class="button-section">
@@ -26,42 +24,34 @@
                     <button @click="getDesserts">Desserts</button>
                 </div>
             </section>
-
-            <div class="recipe-container">
+            <section class="recipe-container">
                 <div v-if="showRecipes" class="recipe-section">
                     <div v-for="recipe in recipes" :key="recipe.id">
                         <h3>{{ recipe.title }}</h3>
-                        <img :src="getImagePath(recipe.image)" alt="Recipe Image" />
                         <button @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Lägg till</button>
                     </div>
                 </div>
-
-
                 <div class="shopping-list" v-if="showShoppingList">
                     <h4>Inköpslista:</h4>
-                    <ul>
-                        <li v-for="item in shoppingBag" :key="item.title">
-                            <label :for="item.title">
-                                <input type="checkbox" />
-                                <h5>{{ item.title }}</h5>
-                                <ul>
-                                    <li v-for="(ingredient, index) in item.ingredients" :key="index">
-                                        {{ ingredient }}
-                                    </li>
-                                </ul>
-                            </label>
-                        </li>
-                    </ul>
-                    <!-- Gör samma sak här som på todo-mvc
-                    att man kan markera och ta bort en eller alla
-                    även att dubbla items ska stå x2 -->
-                    <button>Mark all</button>
-                    <button>Remove items</button>
+                    <div v-for="item in shoppingBag" :key="item.title">
+                        <h5>{{ item.title }}</h5>
+                        <label :for="item.title">
+                            <input type="checkbox" v-model="item.checked">
+                        </label>
+                        <ul>
+                            <li v-for="(ingredient, index) in item.ingredients" :key="index">
+                                {{ ingredient }}
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Gör samma sak här som på todo-mvc att man kan markera och ta bort en eller alla -->
+                    <button @click = "checkAll">Mark all</button>
+                    <button @click = "removeCheckedItem(item)">Remove items</button>
                 </div>
-            </div>
+            </section>
         </main>
     </div>
 </body>
-
+ 
 </html>
 
