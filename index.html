@@ -54,16 +54,16 @@
                         <div class="image-container">
                             <img :src="getImagePath(recipe.image)" alt="Recipe Image" />
                         </div>
-                        <button id="add-button" @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Add</button>                            
+                        <button v-if="!isRecipeInShoppingBag(recipe)" id="add-button" @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Add</button>                            
                     </div>
                 </div>
  
                 <div class="shopping-list" v-if="showShoppingList">
                     <h4>Shopping list:</h4>
  
-                    <div v-for="item in shoppingBag">
-                        <label for="chosen-item">
-                            <input type="checkbox" v-model="item.checked" id="chosen-item">
+                    <div v-for="(item, itemIndex) in shoppingBag">
+                        <label :for="'chosen-item-' + itemIndex">
+                            <input type="checkbox" v-model="item.checked" :id="'chosen-item-' + itemIndex">
  
                             <span>{{ item.title }}</span>
                         </label>

@@ -45,12 +45,20 @@ let app = Vue.createApp({
 
         //metod för att lägga till titel osv i shoppinglistan
         addToShoppingBag({ title, ingredients }) {
+
             const newItem = {
                 title: title,
                 ingredients: ingredients,
                 checked: false,
+                quantity: 1,
+            
             };
             this.shoppingBag.push(newItem);
+       
+        },
+
+        isRecipeInShoppingBag(recipe) {
+            return this.shoppingBag.some(item => item.title === recipe.title);
         },
         //metod för att checka i eller ur checkboxen i shoppinglistan
         toggleCheckbox(item) {
@@ -61,9 +69,6 @@ let app = Vue.createApp({
         //metod för att ta bort icheckade items
         removeCheckedItems() {
             this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
-
-            if (this.shoppingBag.length === 0) {
-            }
         },
 
         //metod för att checka i alla items i shoppinglistan
