@@ -31,8 +31,9 @@
                     <button @click="getDesserts">Desserts</button>
                     <!-- <button id="allergie-button" @click="toggleAllergenInfo">
                         {{ isAllergenInfoActive ? 'Deactivate allergen information' : 'Allergies'
-                        }}
-                    </button> -->
+                        }} -->
+                    </button>
+                    <button @click="toggleView" v-if="shoppingBag.length > 0">Shopping list ({{ shoppingBag.length }})</button>
                     
                 </div>
             </section>
@@ -54,7 +55,7 @@
                     </div>
                 </div>
  
-                <!-- <div class="shopping-list" v-if="showShoppingList">
+                <div class="shopping-list" v-if="showShoppingList">
                     <h4>Shopping list:</h4>
  
                     <div v-for="item in shoppingBag">
@@ -72,7 +73,7 @@
                     </div>
                     <button @click="checkAll">Mark all</button>
                     <button @click="removeCheckedItems">Remove items</button>
-                </div> -->
+                </div>
            
         </main>
  

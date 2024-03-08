@@ -34,6 +34,13 @@ let app = Vue.createApp({
             this.recipes = data.recipes.filter(recipe => recipe.mealType === category);
 
             this.showRecipes = true;
+            this.showShoppingList = false;
+
+        },
+
+        toggleView() {
+            this.showRecipes = !this.showRecipes;
+            this.showShoppingList = !this.showShoppingList;
         },
 
         //metod för att lägga till titel osv i shoppinglistan
@@ -44,7 +51,6 @@ let app = Vue.createApp({
                 checked: false,
             };
             this.shoppingBag.push(newItem);
-            this.showShoppingList = true;
         },
         //metod för att checka i eller ur checkboxen i shoppinglistan
         toggleCheckbox(item) {
@@ -57,7 +63,6 @@ let app = Vue.createApp({
             this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
 
             if (this.shoppingBag.length === 0) {
-                this.showShoppingList = false;
             }
         },
 
