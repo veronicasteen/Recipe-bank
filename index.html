@@ -27,8 +27,8 @@
             <section class="category-container">
                 <h2>Categories:</h2>
                 </button>
-                    <button id="cart-button" @click="toggleView" v-if="shoppingBag.length > 0">
-                    <span id="cart-count">{{ shoppingBag.length }}</span>
+                    <button id="cart-button" @click="toggleView">
+                    <span  v-if="shoppingBag.length > 0" id="cart-count">{{ shoppingBag.length }}</span>
                 </button>
                 <div class="button-section">
                     <button @click="getStarters">Starters</button>
