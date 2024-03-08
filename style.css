@@ -51,9 +51,9 @@ h2 {
     font-size: 24px;
     padding-left:5px;
     padding-right: 5px;
-    border:2px solid;
+    border:2px solid rgba(23, 9, 9, 0.804);
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 6px;
     font-family: "Sofia", cursive;
     background-color: rgba(70, 61, 37, 0.219);
     transition: background-color 0.3s,transform 0.20s ease-in-out; ;
@@ -87,7 +87,7 @@ h2 {
         transform: rotate(180deg);
     } */
 
-section {   
+.category-container {   
     background-color:rgba(244, 244, 244, 0.734);
     box-shadow: 0px 0px 15px rgb(0, 0, 0);
     padding: 40px;
@@ -95,36 +95,22 @@ section {
     margin: auto;
 }
 
-.recipe-container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 20px; /* Justera gapet mellan kolumnerna efter behov */
-    background-color:rgba(244, 244, 244, 0.734);
-    margin-top: 10px;
-}
-
-.category-container{
-    background-color: white;
-    padding: 50px;
-}
-
-.recipe-section {  
+.food-container {  
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 90%;
     gap: 10px;
     margin-right: auto;
     margin-left: auto;
-}
-.recipe-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 10px;
+    background-color:rgba(244, 244, 244, 0.734);
 }
 
 #add-button {
     position: sticky;
     top: 10px;
 }
+
 .image-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -134,9 +120,15 @@ img {
     height: 15rem; /* Bilder kommer inte att vara högre än förälderelementet */    
 }
 
-nav{
-    background-color: white;
-}
+/* .recipe-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px; 
+    background-color:rgba(244, 244, 244, 0.734);
+    
+} */
+
+
 
 
 

@@ -23,7 +23,7 @@
                 <h1>Recipe Bank</h1>
             </header>
  
-            <section>
+            <section class="category-container">
                 <h2>Categories:</h2>
                 <div class="button-section">
                     <button @click="getStarters">Starters</button>
@@ -38,7 +38,7 @@
             </section>
  
             <section class="recipe-container">
-                <div v-if="showRecipes" class="recipe-section">
+                <div v-if="showRecipes" class="food-container">
  
                     <div v-for="recipe in recipes">
                         <h3>{{ recipe.title }}</h3>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
  
-                <div class="shopping-list" v-if="showShoppingList">
+                <!-- <div class="shopping-list" v-if="showShoppingList">
                     <h4>Shopping list:</h4>
  
                     <div v-for="item in shoppingBag">
@@ -78,7 +78,7 @@
                     </div>
                     <button @click="checkAll">Mark all</button>
                     <button @click="removeCheckedItems">Remove items</button>
-                </div>
+                </div> -->
             </section>
            
         </main>
