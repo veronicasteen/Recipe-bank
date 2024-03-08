@@ -36,18 +36,52 @@ h1 {
     font-weight: 100;
 }
 
-h2 {
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 .category-container {   
     background-color:rgba(244, 244, 244, 0.734);
     box-shadow: 0px 0px 15px rgba(124, 112, 80, 0.649);
     padding: 20px;
     width: 90%;
     margin: auto;
+}
+
+h2 {
+    font-weight: 400;
+    text-align: right;
+    margin-bottom: 1rem;
+    width: 60%;
+}
+#cart-button {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-size: 34px;
+    margin-right: 5px;
+    position: absolute; /* Set absolute positioning */
+    top: 150px; /* Adjust top position as needed */
+    right: 120px; /* Adjust right position as needed */
+    border:none;
+    color:rgba(0, 0, 0, 0.864);
+    transition: color 0.2s ease-in-out;
+}
+
+#cart-button::before {
+    content: '\e8cc';  /* Unicode-koden för önskad ikon */
+    position: absolute;
+}
+
+#cart-button:hover {
+    color:hsla(43, 30%, 16%, 0.755);
+}
+
+#cart-count {
+    position: absolute;
+    top: 0;
+    right:0;
+    background-color: rgb(214, 61, 61); /* Justera färgen efter dina önskemål */
+    color: white;
+    font-size: 10px;
+    padding: 2px 3px;
+    border-radius: 50%;
+    border:none;
 }
 
 .button-section {
@@ -67,32 +101,6 @@ h2 {
 .button-section button:hover {
     background-color: hsla(44, 31%, 21%, 0.138);
     transform: scale(1.03);
-}
-
-#cart-button {
-    font-family: 'Material Symbols Outlined';
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    font-size: 34px;
-    margin-right: 5px;
-    position: relative;
-    border:none;
-}
-
-#cart-button::before {
-    content: '\e8cc';  /* Unicode-koden för önskad ikon */
-    position: absolute;
-}
-
-#cart-count {
-    position: relative;
-    top: 0;
-    right:0;
-    background-color: red; /* Justera färgen efter dina önskemål */
-    color: white;
-    font-size: 12px;
-    padding: 2px 5px;
-    border-radius: 50%;
-    border:none;
 }
 
 .food-container {  
