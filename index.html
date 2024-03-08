@@ -37,7 +37,7 @@
                 </div>
             </section>
  
-            <section class="recipe-container">
+           
                 <div v-if="showRecipes" class="food-container">
  
                     <div v-for="recipe in recipes">
@@ -49,14 +49,8 @@
 
                         <div class="image-container">
                             <img :src="getImagePath(recipe.image)" alt="Recipe Image" />
-                            <button id="add-button" @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Lägg till</button>
-                            </div>
- 
-                        <button @click="addToShoppingBag
-                        ({ title: recipe.title,
-                            ingredients: recipe.ingredients })">
-                            Add
-                            to shopping list</button>
+                        </div>
+                        <button id="add-button" @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Add</button>                            
                     </div>
                 </div>
  
@@ -79,7 +73,6 @@
                     <button @click="checkAll">Mark all</button>
                     <button @click="removeCheckedItems">Remove items</button>
                 </div> -->
-            </section>
            
         </main>
  
