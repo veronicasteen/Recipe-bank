@@ -26,6 +26,10 @@
  
             <section class="category-container">
                 <h2>Categories:</h2>
+                </button>
+                    <button id="cart-button" @click="toggleView" v-if="shoppingBag.length > 0">
+                    <span id="cart-count">{{ shoppingBag.length }}</span>
+                </button>
                 <div class="button-section">
                     <button @click="getStarters">Starters</button>
                     <button @click="getMainCourses">Main Courses</button>
@@ -33,10 +37,6 @@
                     <!-- <button id="allergie-button" @click="toggleAllergenInfo">
                         {{ isAllergenInfoActive ? 'Deactivate allergen information' : 'Allergies'
                         }} -->
-                    </button>
-                        <button id="cart-button" @click="toggleView" v-if="shoppingBag.length > 0">
-                        <span id="cart-count">{{ shoppingBag.length }}</span>
-                    </button>
                     
                 </div>
             </section>
