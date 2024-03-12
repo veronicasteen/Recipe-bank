@@ -26,47 +26,47 @@
             <h1>Recipe Bank</h1>
         </header>
 
-            <section class="category-container">
-                <h2>Categories:</h2>
-                </button>
-                <button id="cart-button" @click="toggleView">
-                    <span v-if="shoppingBag.length > 0" id="cart-count">{{ shoppingBag.length }}</span>
-                </button>
-                <div class="button-section">
-                    <button @click="getStarters">Starters</button>
-                    <button @click="getMainCourses">Main Courses</button>
-                    <button @click="getDesserts">Desserts</button>
+        <section class="category-container">
+            <h2>Categories:</h2>
+            </button>
+            <button id="cart-button" @click="toggleView">
+                <span v-if="shoppingBag.length > 0" id="cart-count">{{ shoppingBag.length }}</span>
+            </button>
+            <div class="button-section">
+                <button id="starters-button" @click="getStarters">Starters</button>
+                    <button id="main-button" @click="getMainCourses">Main Courses</button>
+                    <button id="dessert-button" @click="getDesserts">Desserts</button>
                     <button id="allergie-button" @click="toggleAllergenInfo">
-                        {{ isAllergenInfoActive ? 'Deactivate allergen information' : 'Are you allergic? Press here!'
-                        }}
+                    {{ isAllergenInfoActive ? 'Deactivate allergen information' : 'Are you allergic? Press here!'
+                    }}
 
+            </div>
+        </section>
+
+
+        <div v-if="showRecipes" class="food-container">
+
+            <section v-for="recipe in recipes">
+                <h3>{{ recipe.title }}</h3>
+
+                <div v-if="isAllergenInfoActive">
+                    <p id="allergens-text">Allergens: {{ recipe.allergens ? recipe.allergens.join(', ') : 'None' }}</p>
                 </div>
-            </section>
 
-
-            <div v-if="showRecipes" class="food-container">
-
-                <div v-for="recipe in recipes">
-                    <h3>{{ recipe.title }}</h3>
-
-                    <div v-if="isAllergenInfoActive">
-                        <p id = "allergens-text">Allergens: {{ recipe.allergens ? recipe.allergens.join(', ') : 'None' }}</p>
-                    </div>
-
-                    <div class="image-container">
-                        <img :src="getImagePath(recipe.image)" alt="Recipe Image">
-                        <div class = "image-overlay">
-                            <div  class="preparation-time">
+                <div class="image-container">
+                    <img :src="getImagePath(recipe.image)" alt="Recipe Image">
+                    <div class="image-overlay">
+                        <div class="preparation-time">
                             <p>{{ recipe.preparationTime }} </p>
                         </div>
                     </div>
 
-                    </div>
-                    <button id="add-button"
-                        @click="addToShoppingBag({ ingredients: recipe.ingredients })">Add</button>
                 </div>
-            </div>
+                <button id="add-button" @click="addToShoppingBag({ ingredients: recipe.ingredients })">Add</button>
+            </section>
+        </div>
 
+        <section v-if="showShoppingList" class="shopping-list">
             <h3>Shopping list</h3>
             <div v-for="item in shoppingBag">
                 <ul>
@@ -78,15 +78,13 @@
                     </li>
                 </ul>
             </div>
-            
-                <button @click="copyShoppingList">Copy all</button>
-                <button @click="checkAll">Mark all</button>
-                <button @click="removeCheckedItems">Remove marked items</button>
-            </div>
-            
 
-
-        </div>
+            <button @click="copyShoppingList">Copy all</button>
+            <button @click="checkAll">Mark all</button>
+            <button @click="removeCheckedItems">Remove marked items</button>
+        </section>
+    </div>
+    
 </body>
 
 </html>
