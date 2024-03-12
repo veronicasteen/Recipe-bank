@@ -4,6 +4,7 @@ Vue.createApp({
             showRecipes: false,
             showShoppingList: false,
             shoppingBag: [],
+            recipes: [],
             isAllergenInfoActive: false,
             // showPrepreparationTime: false,
         };
@@ -38,8 +39,9 @@ Vue.createApp({
         },
 
         toggleView() {
-            this.showRecipes = !this.showRecipes;
-            this.showShoppingList = !this.showShoppingList;
+                // Visa bara shoppingbagen om det finns något i den
+                this.showShoppingList = true;
+                this.showRecipes = false;
         },
 
         //metod för att lägga till titel osv i shoppinglistan

@@ -50,7 +50,7 @@
                     <h3>{{ recipe.title }}</h3>
 
                     <div v-if="isAllergenInfoActive">
-                        <p>Allergens: {{ recipe.allergens ? recipe.allergens.join(', ') : 'None' }}</p>
+                        <p id = "allergens-text">Allergens: {{ recipe.allergens ? recipe.allergens.join(', ') : 'None' }}</p>
                     </div>
 
                     <div class="image-container">
@@ -62,7 +62,7 @@
                     </div>
 
                     </div>
-                    <button v-if="!isRecipeInShoppingBag(recipe)" id="add-button"
+                    <button id="add-button"
                         @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Add</button>
                 </div>
             </div>
@@ -71,14 +71,14 @@
 
                 <h4>Shopping list:</h4>
 
-                <div v-for="(item, itemIndex) in shoppingBag">
-                    <label :for="'chosen-item-' + itemIndex">
-                        <input type="checkbox" v-model="item.checked" :id="'chosen-item-' + itemIndex">
+                <div v-for="item in shoppingBag">
+                    <label for="chosen-item">
+                        <input type="checkbox" v-model="item.checked" id="chosen-item">
 
                         <span>{{ item.title }}</span>
                     </label>
                     <ul>
-                        <li v-for="(ingredient, index) in item.ingredients">
+                        <li v-for="ingredient in item.ingredients">
                             {{ ingredient }}
                         </li>
                     </ul>

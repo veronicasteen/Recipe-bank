@@ -1,164 +1,254 @@
 {
   "recipes": [
     {
-      "id": 1,
       "title": "Caprese Salad",
-      "ingredients": ["Tomatoes", "Fresh Mozzarella", "Basil", "Olive Oil", "Balsamic Vinegar", "Salt", "Pepper"],
+      "ingredients": [
+        {"name": "Tomatoes", "gram": 200},
+        {"name": "Fresh Mozzarella", "gram": 150},
+        {"name": "Basil", "gram": 20},
+        {"name": "Olive Oil", "gram": 30},
+        {"name": "Balsamic Vinegar", "gram": 30},
+        {"name": "Salt", "gram": 5},
+        {"name": "Pepper", "gram": 5}
+      ],
       "mealType": "starter",
       "allergens": ["Milk"],
       "preparationTime": "15 minutes",
       "image": "caprese_salad.jpg"
     },
     {
-      "id": 2,
       "title": "Bruschetta",
-      "ingredients": ["Tomatoes", "Garlic", "Basil", "Olive Oil", "Balsamic Vinegar", "Baguette"],
+      "ingredients": [
+        {"name": "Tomatoes", "gram": 200},
+        {"name": "Garlic", "gram": 10},
+        {"name": "Basil", "gram": 20},
+        {"name": "Olive Oil", "gram": 30},
+        {"name": "Balsamic Vinegar", "gram": 30},
+        {"name": "Baguette", "gram": 150}
+      ],
       "mealType": "starter",
       "allergens": ["Gluten"],
       "preparationTime": "20 minutes",
       "image": "bruschetta.jpg"
     },
     {
-      "id": 3,
       "title": "Spinach and Artichoke Dip",
-      "ingredients": ["Spinach", "Artichoke Hearts", "Cream Cheese", "Sour Cream", "Parmesan", "Garlic", "Tortilla Chips"],
+      "ingredients": [
+        {"name": "Spinach", "gram": 150},
+        {"name": "Artichoke Hearts", "gram": 200},
+        {"name": "Cream Cheese", "gram": 150},
+        {"name": "Sour Cream", "gram": 100},
+        {"name": "Parmesan", "gram": 50},
+        {"name": "Garlic", "gram": 10},
+        {"name": "Tortilla Chips", "gram": 200}
+      ],
       "mealType": "starter",
       "allergens": ["Milk"],
       "preparationTime": "30 minutes",
       "image": "spinach_artichoke_dip.jpg"
     },
     {
-      "id": 4,
       "title": "Chicken Caesar Salad",
-      "ingredients": ["Romaine Lettuce", "Grilled Chicken", "Croutons", "Parmesan", "Caesar Dressing"],
+      "ingredients": [
+        {"name": "Romaine Lettuce", "gram": 150},
+        {"name": "Grilled Chicken", "gram": 200},
+        {"name": "Croutons", "gram": 50},
+        {"name": "Parmesan", "gram": 30},
+        {"name": "Caesar Dressing", "gram": 30}
+      ],
       "mealType": "starter",
       "allergens": ["Gluten", "Egg"],
       "preparationTime": "25 minutes",
       "image": "caesar_salad.jpg"
     },
     {
-      "id": 5,
       "title": "Shrimp Cocktail",
-      "ingredients": ["Shrimp", "Cocktail Sauce", "Lemon Wedges"],
+      "ingredients": [
+        {"name": "Shrimp", "gram": 200},
+        {"name": "Cocktail Sauce", "gram": 50},
+        {"name": "Lemon Wedges", "gram": 30}
+      ],
       "mealType": "starter",
       "allergens": ["Crustacean"],
       "preparationTime": "15 minutes",
       "image": "shrimp_cocktail.jpg"
     },
     {
-      "id": 6,
       "title": "Fried Mushrooms",
-      "ingredients": ["Mushrooms", "Garlic", "Thyme", "Olive Oil"],
+      "ingredients": [
+        {"name": "Mushrooms", "gram": 200},
+        {"name": "Garlic", "gram": 10},
+        {"name": "Thyme", "gram": 5},
+        {"name": "Olive Oil", "gram": 30}
+      ],
       "mealType": "starter",
       "preparationTime": "20 minutes",
       "image": "fried_mushroom.jpg"
     },
     {
-      "id": 7,
       "title": "Spaghetti Bolognese",
-      "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onions", "Garlic", "Oregano"],
+      "ingredients": [
+        {"name": "Spaghetti", "gram": 200},
+        {"name": "Ground Beef", "gram": 200},
+        {"name": "Tomato Sauce", "gram": 150},
+        {"name": "Onions", "gram": 50},
+        {"name": "Garlic", "gram": 10},
+        {"name": "Oregano", "gram": 5}
+      ],
       "mealType": "main course",
       "allergens": ["Gluten"],
       "preparationTime": "40 minutes",
       "image": "spaghetti_bolognese.jpg"
     },
     {
-      "id": 8,
       "title": "Grilled Salmon",
-      "ingredients": ["Salmon Fillets", "Lemon", "Dill", "Olive Oil", "Salt", "Pepper"],
+      "ingredients": [
+        {"name": "Salmon Fillets", "gram": 200},
+        {"name": "Lemon", "gram": 30},
+        {"name": "Dill", "gram": 10},
+        {"name": "Olive Oil", "gram": 30},
+        {"name": "Salt", "gram": 5},
+        {"name": "Pepper", "gram": 5}
+      ],
       "mealType": "main course",
       "preparationTime": "30 minutes",
       "image": "grilled_salmon.jpg"
     },
     {
-      "id": 9,
       "title": "Chicken Alfredo Pasta",
-      "ingredients": ["Fettuccine Pasta", "Chicken Breast", "Heavy Cream", "Parmesan", "Butter", "Garlic"],
+      "ingredients": [
+        {"name": "Fettuccine Pasta", "gram": 200},
+        {"name": "Chicken Breast", "gram": 200},
+        {"name": "Heavy Cream", "gram": 150},
+        {"name": "Parmesan", "gram": 30},
+        {"name": "Butter", "gram": 30},
+        {"name": "Garlic", "gram": 10}
+      ],
       "mealType": "main course",
       "allergens": ["Milk", "Gluten"],
       "preparationTime": "35 minutes",
       "image": "chicken_alfredo.jpg"
     },
     {
-      "id": 10,
       "title": "Vegetarian Pizza",
-      "ingredients": ["Pizza Dough", "Tomato Sauce", "Mozzarella", "Bell Peppers", "Onions", "Olives"],
+      "ingredients": [
+        {"name": "Pizza Dough", "gram": 200},
+        {"name": "Tomato Sauce", "gram": 150},
+        {"name": "Mozzarella", "gram": 150},
+        {"name": "Bell Peppers", "gram": 50},
+        {"name": "Onions", "gram": 50},
+        {"name": "Olives", "gram": 30}
+      ],
       "mealType": "main course",
       "allergens": ["Gluten", "Milk"],
       "preparationTime": "25 minutes",
       "image": "vegetarian_pizza.jpg"
     },
     {
-      "id": 11,
       "title": "Beef Stir-Fry",
-      "ingredients": ["Beef Strips", "Broccoli", "Bell Peppers", "Soy Sauce", "Ginger", "Garlic", "Rice"],
+      "ingredients": [
+        {"name": "Beef Strips", "gram": 200},
+        {"name": "Broccoli", "gram": 150},
+        {"name": "Bell Peppers", "gram": 50},
+        {"name": "Soy Sauce", "gram": 30},
+        {"name": "Ginger", "gram": 10},
+        {"name": "Garlic", "gram": 10},
+        {"name": "Rice", "gram": 200}
+      ],
       "mealType": "main course",
       "allergens": ["Soy"],
       "preparationTime": "30 minutes",
       "image": "beef_stir_fry.jpg"
     },
     {
-      "id": 12,
       "title": "Pesto Pasta with Cherry Tomatoes",
-      "ingredients": ["Penne Pasta", "Basil Pesto", "Cherry Tomatoes", "Parmesan", "Olive Oil"],
+      "ingredients": [
+        {"name": "Penne Pasta", "gram": 200},
+        {"name": "Basil Pesto", "gram": 50},
+        {"name": "Cherry Tomatoes", "gram": 150},
+        {"name": "Parmesan", "gram": 30},
+        {"name": "Olive Oil", "gram": 30}
+      ],
       "mealType": "main course",
       "allergens": ["Nuts"],
       "preparationTime": "20 minutes",
       "image": "pesto_pasta.jpg"
     },
     {
-      "id": 13,
       "title": "Chocolate Brownies",
-      "ingredients": ["Butter", "Sugar", "Eggs", "Flour", "Cocoa Powder", "Vanilla Extract"],
+      "ingredients": [
+        {"name": "Butter", "gram": 150},
+        {"name": "Sugar", "gram": 150},
+        {"name": "Eggs", "gram": 100},
+        {"name": "Flour", "gram": 100},
+        {"name": "Cocoa Powder", "gram": 30},
+        {"name": "Vanilla Extract", "gram": 10}
+      ],
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
       "preparationTime": "40 minutes",
       "image": "chocolate_brownies.jpg"
     },
     {
-      "id": 14,
       "title": "Vanilla Ice Cream with Berries",
-      "ingredients": ["Vanilla Ice Cream", "Mixed Berries", "Honey"],
+      "ingredients": [
+        {"name": "Vanilla Ice Cream", "gram": 200},
+        {"name": "Mixed Berries", "gram": 150},
+        {"name": "Honey", "gram": 30}
+      ],
       "mealType": "dessert",
       "allergens": ["Milk"],
       "preparationTime": "15 minutes",
       "image": "vanilla_ice_cream.jpg"
     },
     {
-      "id": 15,
       "title": "Strawberry Shortcake",
-      "ingredients": ["Sponge Cake", "Whipped Cream", "Strawberries"],
+      "ingredients": [
+        {"name": "Sponge Cake", "gram": 150},
+        {"name": "Whipped Cream", "gram": 100},
+        {"name": "Strawberries", "gram": 150}
+      ],
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
       "preparationTime": "30 minutes",
       "image": "strawberry_shortcake.jpg"
     },
     {
-      "id": 16,
       "title": "Chocolate Ice Cream",
-      "ingredients": ["Chocolate Ice Cream", "Blueberries", "Cashew nuts"],
+      "ingredients": [
+        {"name": "Chocolate Ice Cream", "gram": 200},
+        {"name": "Blueberries", "gram": 50},
+        {"name": "Cashew nuts", "gram": 30}
+      ],
       "mealType": "dessert",
       "allergens": ["Milk", "Nuts"],
       "preparationTime": "25 minutes",
       "image": "chocolate_ice_cream.jpg"
     },
     {
-      "id": 17,
       "title": "Tiramisu",
-      "ingredients": ["Ladyfingers", "Espresso", "Mascarpone Cheese", "Cocoa Powder"],
+      "ingredients": [
+        {"name": "Ladyfingers", "gram": 150},
+        {"name": "Espresso", "gram": 30},
+        {"name": "Mascarpone Cheese", "gram": 150},
+        {"name": "Cocoa Powder", "gram": 20}
+      ],
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
       "preparationTime": "45 minutes",
       "image": "tiramisu.jpg"
     },
     {
-      "id": 18,
       "title": "Fruit Salad",
-      "ingredients": ["Mixed Fruits", "Honey", "Lime Juice", "Mint"],
+      "ingredients": [
+        {"name": "Mixed Fruits", "gram": 200},
+        {"name": "Honey", "gram": 30},
+        {"name": "Lime Juice", "gram": 20},
+        {"name": "Mint", "gram": 10}
+      ],
       "mealType": "dessert",
       "preparationTime": "15 minutes",
       "image": "fruit_salad.jpg"
     }
   ]
 }
-
