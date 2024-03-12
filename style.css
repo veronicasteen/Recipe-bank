@@ -13,19 +13,12 @@ html{
    
 }
  
-main{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
- 
 header {
-    background-image: url(black-wallpaper.jpg);
+    background-image: url(backround-image.jpg);
     background-size:45%;
-    background-color:rgba(244, 244, 244, 0.734);
-    box-shadow: 0px 0px 15px rgb(65, 58, 39);
+    box-shadow: 0px 0px 15px rgb(122, 93, 82);
     padding: 15px;
-    width: 98%;
+    width: 70%;
     margin: auto;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -34,15 +27,14 @@ header {
 h1 {
     color:rgb(0, 0, 0);
     text-align: center;
-    font-size: 80px;
     font-weight: 100;
 }
  
 .category-container {  
-    background-color:rgba(244, 244, 244, 0.734);
+    background-color:rgba(244, 244, 244, 0.485);
     box-shadow: 0px 0px 15px rgba(124, 112, 80, 0.649);
     padding: 20px;
-    width: 98%;
+    width: 70%;
     margin: auto;
     position: relative;
 }
@@ -64,17 +56,14 @@ h2 {
     border:none;
     color:rgba(0, 0, 0, 0.864);
     transition: color 0.2s ease-in-out;
-}
- 
+} 
 #cart-button::before {
     content: '\e8cc';  /* Unicode-koden för önskad ikon */
     position: absolute;
 }
- 
 #cart-button:hover {
     color:hsla(43, 30%, 16%, 0.755);
-}
- 
+} 
 #cart-count {
     position: absolute;
     top: 0;
@@ -107,7 +96,6 @@ h2 {
     background-color: rgba(255, 255, 255, 0);
     transform: scale(1.03);
 }
- 
 #allergie-button{
     font-size: 20px;
     font-weight: 300;
@@ -131,7 +119,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 98%;
+    width: 70%;
     height: 340px;
     gap: 30px;
     text-align: center;
@@ -140,7 +128,7 @@ h2 {
     /* margin-bottom: 10px; */
     margin-top: 10px;
     padding-bottom: 10px;
-    background-color:rgba(244, 244, 244, 0.734);
+    background-color:rgba(244, 244, 244, 0.307);
     box-shadow: 0px 0px 15px rgba(124, 112, 80, 0.647);
     overflow-y:scroll;
     transition: transform 0.3s ease-in-out;
@@ -153,11 +141,16 @@ h3 {
     font-weight: 400;
     font-style: italic;
 }
- 
+
 #allergens-text{
-   margin-bottom: 10px;
+    margin-bottom: 10px;
 }
  
+.image-container {
+    margin-bottom: 10px;
+    position: relative;
+}
+
 #add-button {
     border:none;
     font-size: 16px;
@@ -172,19 +165,13 @@ h3 {
 #add-button:hover {
     background-color: rgba(255, 255, 255, 0);
 }
- 
-.image-container {
-    margin-bottom: 10px;
-    position: relative;
-}
- 
+
 img {
     box-shadow: 0px 0px 15px rgba(63, 57, 41, 0.577);
     border:2px solid rgba(255, 255, 255, 0.212);
     width: 16rem;
     height: 13rem;
-}
- 
+} 
 .preparation-time {
     position: absolute;
     top: 50%;
@@ -195,8 +182,7 @@ img {
     font-size: 25px;
     color:black;
  
-}
- 
+} 
 .image-overlay {
     position: absolute;
     top: 0;
@@ -207,11 +193,14 @@ img {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
- 
 .image-container:hover .image-overlay, .image-container:hover .preparation-time {
     opacity: 1;  
 }
- 
+
+@media (max-width: 1024px){
+    main, .food-container, header, .category-container{
+        width: 85%;}
+    }
 @media (max-width: 650px){
     main, .food-container, header, .category-container{
         width: 100%;}
