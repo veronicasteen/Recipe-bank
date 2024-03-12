@@ -63,31 +63,29 @@
 
                     </div>
                     <button id="add-button"
-                        @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Add</button>
+                        @click="addToShoppingBag({ ingredients: recipe.ingredients })">Add</button>
                 </div>
             </div>
 
-            <div class="shopping-list" v-if="showShoppingList">
-
-                <h4>Shopping list:</h4>
-
-                <div v-for="item in shoppingBag">
-                    <label for="chosen-item">
-                        <input type="checkbox" v-model="item.checked" id="chosen-item">
-
-                        <span>{{ item.title }}</span>
-                    </label>
-                    <ul>
-                        <li v-for="ingredient in item.ingredients">
-                            {{ ingredient }}
-                        </li>
-                    </ul>
-
-                </div>
+            <h3>Shopping list</h3>
+            <div v-for="item in shoppingBag">
+                <ul>
+                    <li>
+                        <label :for="'chosen-item-' + item.title">
+                            <input type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
+                            {{ item.title }}: {{ item.gram }} g
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            
                 <button @click="copyShoppingList">Copy all</button>
                 <button @click="checkAll">Mark all</button>
                 <button @click="removeCheckedItems">Remove marked items</button>
             </div>
+            
+
+
         </div>
 </body>
 

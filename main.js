@@ -6,7 +6,6 @@ Vue.createApp({
             shoppingBag: [],
             recipes: [],
             isAllergenInfoActive: false,
-            // showPrepreparationTime: false,
         };
     },
 
@@ -45,40 +44,44 @@ Vue.createApp({
         },
 
         //metod för att lägga till titel osv i shoppinglistan
-        addToShoppingBag({ title, ingredients }) {
+        addToShoppingBag({ ingredients }) {
+            ingredients.forEach(ingredient => {
+                //Denna kodrad söker efter redan existerade titel på ingredient
 
-            let newItem = {
-                title: title,
-                ingredients: ingredients,
-                checked: false,
-            };
-            this.shoppingBag.push(newItem);
+                let existingIngredient = this.shoppingBag.find(item => item.title === ingredient.name);
+        
+                if (existingIngredient) {
+                    
+                    existingIngredient.gram += ingredient.gram;
+                } else {
 
+                    let newItem = {
+                        title: ingredient.name,
+                        gram: ingredient.gram,
+                        checked: false,
+                    };
+                    this.shoppingBag.push(newItem);
+                }
+            });
         },
 
         toggleAllergenInfo() {
             this.isAllergenInfoActive = !this.isAllergenInfoActive;
         },
 
-        //metod för att kolla om receptet redan finns i shoppingbagen
-        //för att inaktivera "add" knappen v
-
-        isRecipeInShoppingBag(recipe) {
-            return this.shoppingBag.some(item => item.title === recipe.title);
-        },
-
-        //metod för att checka i eller ur checkboxen i shoppinglistan
-        toggleCheckbox(item) {
-
-            item.checked = !item.checked;
+        // metod för att checka i eller ur checkboxen i shoppinglistan
+        toggleCheckbox(ingredient) {
+            ingredient.checked = !ingredient.checked;
         },
 
         //metod för att ta bort icheckade items
         removeCheckedItems() {
+            
             this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
+            
         },
 
-        //metod för att checka i alla items i shoppinglistan
+        // metod för att checka i alla items i shoppinglistan
         checkAll() {
             let allChecked = this.shoppingBag.every(item => item.checked);
             this.shoppingBag.forEach(item => (item.checked = !allChecked));
@@ -87,17 +90,17 @@ Vue.createApp({
         copyShoppingList() {
             // Hämtar texten från inköpslistan
             let shoppingListText = this.shoppingBag
-                .map(item => `${item.title}: ${item.ingredients.join(', ')}`)
+                .map(item => `${item.title}: ${item.gram} g`)
                 .join('\n');
-
+        
             // Kopierar texten 
             navigator.clipboard.writeText(shoppingListText)
                 .then(() => {
                     // Meddela användaren att kopieringen är klar
                     alert('Your shopping-list has been copied.');
-                })
-
-        },
+                });
+        }
+        
     }
 })
 .mount('#app');
