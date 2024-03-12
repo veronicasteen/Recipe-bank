@@ -1,11 +1,11 @@
 Vue.createApp({
     data() {
         return {
-            recipes: [],
             showRecipes: false,
             showShoppingList: false,
             shoppingBag: [],
             isAllergenInfoActive: false,
+            // showPrepreparationTime: false,
         };
     },
 

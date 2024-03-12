@@ -101,6 +101,7 @@ h2 {
     border:6px solid rgba(124, 112, 80, 0.212);
     background-color: rgba(255, 255, 255, 0);
     transition: background-color 0.3s,transform 0.20s ease-in-out;
+    margin-top: 10px;
 }
 .button-section button:hover {
     background-color: hsla(44, 31%, 21%, 0.138);
@@ -158,44 +159,64 @@ h3 {
     margin-bottom: 10px;
     position: relative;
 }
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
+/* 
 .image-container:hover::before {
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 30%;
-    background-color: rgba(255, 255, 255, 0.547);
-    z-index: 1; /* Se till att lådan ligger ovanpå bilden */
+    z-index: 1; 
 }
 
 .image-container:hover::after {
-    content: 'Time'; /* Lägg till den önskade texten här */
     position: absolute;
-    top: 15%; /* Placera texten i mitten vertikalt */
-    left: 50%; /* Placera texten i mitten horisontellt */
-    transform: translate(-50%, -50%); /* Centrera texten korrekt */
-    color: #000; 
-    font-family: "Sofia", cursive;
+    transform: translate(-50%, -50%); 
     font-weight: 600;
-    font-style: italic;
     font-size: 20px;
-    z-index: 2; /* Se till att texten ligger ovanpå lådan */
-}
+    z-index: 2; 
+} */
+
 img {
     box-shadow: 0px 0px 15px rgba(63, 57, 41, 0.577);
     border:2px solid rgba(255, 255, 255, 0.212);
     width: 16rem; 
     height: 13rem;
 }
+
+.preparation-time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+    font-size: 25px;
+    color:black;
+
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.5); /* Vit bakgrund med 80% opacitet */
+    opacity: 0; /* Gör rutan osynlig som standard */
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;  
+}
+
+.image-container:hover .preparation-time {
+    opacity: 1;  
+} 
 
 @media (max-width: 600px){
     main, .food-container, header, .category-container{

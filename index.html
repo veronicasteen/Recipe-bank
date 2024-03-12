@@ -55,9 +55,11 @@
 
                     <div class="image-container">
                         <img :src="getImagePath(recipe.image)" alt="Recipe Image">
-                        <div  class="centered">
-                            {{ recipe.preparationTime }}
+                        <div class = "image-overlay">
+                            <div  class="preparation-time">
+                            <p>{{ recipe.preparationTime }} </p>
                         </div>
+                    </div>
 
                     </div>
                     <button v-if="!isRecipeInShoppingBag(recipe)" id="add-button"
@@ -84,7 +86,7 @@
                 </div>
                 <button @click="copyShoppingList">Copy all</button>
                 <button @click="checkAll">Mark all</button>
-                <button @click="removeCheckedItems">Remove items</button>
+                <button @click="removeCheckedItems">Remove marked items</button>
             </div>
         </div>
 </body>
