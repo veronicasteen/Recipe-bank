@@ -44,9 +44,9 @@
         </section>
 
 
-        <div v-if="showRecipes" class="food-container">
+        <section v-if="showRecipes" class="food-container">
 
-            <section v-for="recipe in recipes">
+            <div v-for="recipe in recipes">
                 <h3>{{ recipe.title }}</h3>
 
                 <div v-if="isAllergenInfoActive">
@@ -63,8 +63,8 @@
 
                 </div>
                 <button id="add-button" @click="addToShoppingBag({ ingredients: recipe.ingredients })">Add</button>
-            </section>
-        </div>
+            </div>
+        </section>
 
         <section v-if="showShoppingList" class="shopping-list">
             <h3>Shopping list</h3>
