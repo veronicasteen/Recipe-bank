@@ -14,7 +14,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Sofia&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet"
@@ -22,12 +21,10 @@
 </head>
 
 <body>
-    <main>
+    <div id="app">
         <header>
             <h1>Recipe Bank</h1>
         </header>
-
-        <div id="app">
 
             <section class="category-container">
                 <h2>Categories:</h2>
@@ -57,7 +54,11 @@
                     </div>
 
                     <div class="image-container">
-                        <img :src="getImagePath(recipe.image)" alt="Recipe Image" />
+                        <img :src="getImagePath(recipe.image)" alt="Recipe Image">
+                        <div  class="centered">
+                            {{ recipe.preparationTime }}
+                        </div>
+
                     </div>
                     <button v-if="!isRecipeInShoppingBag(recipe)" id="add-button"
                         @click="addToShoppingBag({ title: recipe.title, ingredients: recipe.ingredients })">Add</button>
@@ -86,9 +87,6 @@
                 <button @click="removeCheckedItems">Remove items</button>
             </div>
         </div>
-    </main>
-
-
 </body>
 
 </html>

@@ -30,6 +30,8 @@ header {
     margin-top: 20px;
 }
 
+
+
 h1 {
     color:rgb(0, 0, 0);
     text-align: center;
@@ -157,6 +159,13 @@ h3 {
     position: relative;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 .image-container:hover::before {
     content: '';
     position: absolute;
@@ -174,7 +183,7 @@ h3 {
     top: 15%; /* Placera texten i mitten vertikalt */
     left: 50%; /* Placera texten i mitten horisontellt */
     transform: translate(-50%, -50%); /* Centrera texten korrekt */
-    color: #000; /* Justera textens färg efter behov */
+    color: #000; 
     font-family: "Sofia", cursive;
     font-weight: 600;
     font-style: italic;
@@ -184,18 +193,16 @@ h3 {
 img {
     box-shadow: 0px 0px 15px rgba(63, 57, 41, 0.577);
     border:2px solid rgba(255, 255, 255, 0.212);
-    width: 16rem; /* Bilder kommer inte att vara bredare än förälderelementet */
-    height: 13rem; /* Bilder kommer inte att vara högre än förälderelementet */    
+    width: 16rem; 
+    height: 13rem;
 }
 
+@media (max-width: 600px){
+    main, .food-container, header, .category-container{
+        width: 100%;}
+ 
+}
 
-/* .recipe-container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 20px; 
-    background-color:rgba(244, 244, 244, 0.734);
-    
-} */
 
 
 

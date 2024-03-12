@@ -1,4 +1,4 @@
-let app = Vue.createApp({
+Vue.createApp({
     data() {
         return {
             recipes: [],
@@ -10,7 +10,6 @@ let app = Vue.createApp({
     },
 
     methods: {
-
         //metod för att hämta bilderna från bild-mappen
         getImagePath(imageFileName) {
 
@@ -86,18 +85,17 @@ let app = Vue.createApp({
         copyShoppingList() {
             // Hämtar texten från inköpslistan
             let shoppingListText = this.shoppingBag
-              .map(item => `${item.title}: ${item.ingredients.join(', ')}`)
-              .join('\n');
-          
+                .map(item => `${item.title}: ${item.ingredients.join(', ')}`)
+                .join('\n');
+
             // Kopierar texten 
             navigator.clipboard.writeText(shoppingListText)
-              .then(() => {
-                // Meddela användaren att kopieringen är klar
-                alert('Your shopping-list has been copied.');
-              })
-          
-    },
-}
-});
+                .then(() => {
+                    // Meddela användaren att kopieringen är klar
+                    alert('Your shopping-list has been copied.');
+                })
 
-app.mount('#app');
+        },
+    }
+})
+.mount('#app');
