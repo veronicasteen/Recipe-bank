@@ -28,6 +28,8 @@ h1 {
     color:rgb(0, 0, 0);
     text-align: center;
     font-weight: 100;
+    font-size: 70px;
+    
 }
  
 .category-container {  
@@ -227,6 +229,39 @@ img {
     border-bottom:2px solid rgba(76, 76, 76, 0.685);
 }
 
+#checkbox-button {
+    width: 2.1em;
+    height: 2.1em;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    background-color:  rgba(87, 76, 45, 0.105);
+    border-radius: 50%;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+#checkbox-button::before{
+    content: "\2713";
+    color: rgb(59, 53, 36);
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#checkbox-button:checked::before {
+    opacity: 1;
+}
+#checkbox-button:checked {
+    transition: opacity 0.2s ease;
+    border: 2px solid rgba(59, 53, 36, 0.519);
+}
 
 .shoppinglist-buttons {
     display: flex;
@@ -257,8 +292,10 @@ img {
         width: 85%;}
     } */
 @media (max-width: 650px){
-    main, .food-container, header, .category-container, .shoppinglist-container li{
-        width: 100%;}
+    .food-container, header, .category-container, .shoppinglist-container li{
+        width: 100%;
+        
+    }
  
         .button-section{
             font-size: 15px;

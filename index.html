@@ -11,6 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Sofia&display=swap"
@@ -72,8 +73,8 @@
             <div id="list-container" v-for="item in shoppingBag">
                 <ul>
                     <li>
-                        <input type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
-                        <label id="checkbox-button" :for="'chosen-item-' + item.title">{{ item.title }}: {{ item.gram }} g</label>
+                        <input id="checkbox-button" type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
+                        <label :for="'chosen-item-' + item.title">{{ item.title }}: {{ item.gram }} g</label>
                     </li>
                 </ul>
             </div>
