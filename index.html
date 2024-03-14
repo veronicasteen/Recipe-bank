@@ -30,7 +30,6 @@
 
         <section class="category-container">
             <h2>Categories:</h2>
-            </button>
             <button id="cart-button" @click="toggleView">
                 <span v-if="cartItemCount > 0" id="cart-count">{{ cartItemCount }}</span>
             </button>
@@ -40,7 +39,7 @@
                     <button id="dessert-button" @click="getDesserts">Desserts</button>
                     <button id="allergie-button" @click="toggleAllergenInfo">
                     {{ isAllergenInfoActive ? 'Deactivate allergen information' : 'Are you allergic? Press here!'
-                    }}
+                    }}</button>
 
             </div>
         </section>
@@ -74,7 +73,8 @@
                 <ul>
                     <li>
                         <input id="checkbox-button" type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
-                        <label :for="'chosen-item-' + item.title">{{ item.title }}: {{ item.gram }} g</label>
+                        <label :for="'chosen-item-' + item.title">
+                            {{ item.title }}: {{ item.gram }} g</label>
                     </li>
                 </ul>
             </div>
