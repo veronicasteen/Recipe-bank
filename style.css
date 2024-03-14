@@ -226,22 +226,7 @@ img {
     position: relative;
     border-bottom:2px solid rgba(76, 76, 76, 0.685);
 }
-#checkbox-button {
-    width: 15px;
-    height: 15px;
-    background-color: rgba(124, 112, 80, 0.212);
-    border: 2px solid rgba(124, 112, 80, 0.212);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    opacity: 0;
-}
 
-/* Checkboxen när den är markerad */
-#checkbox-button:checked {
-    background-color: black; /* Ändra färgen här */
-    border-color: black; /* Kan också ändras om önskat */
-}
 
 .shoppinglist-buttons {
     display: flex;
