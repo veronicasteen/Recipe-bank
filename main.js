@@ -7,6 +7,7 @@ Vue.createApp({
             shoppingBag: [],
             recipes: [],
             isAllergenInfoActive: false,
+            cartItemCount: 0  
         };
     },
 
@@ -46,7 +47,6 @@ Vue.createApp({
 
         addToShoppingBag({ ingredients }) {
             ingredients.forEach(ingredient => {
-                //Denna kodrad söker efter redan existerade titel på ingredient
 
                 let existingIngredient = this.shoppingBag.find(item => item.title === ingredient.name);
 
@@ -63,20 +63,24 @@ Vue.createApp({
                     this.shoppingBag.push(newItem);
                 }
             });
+            this.cartItemCount = this.shoppingBag.length; 
+            alert(this.cartItemCount);
+            alert(this.shoppingBag.length)
         },
+        
 
         toggleAllergenInfo() {
             this.isAllergenInfoActive = !this.isAllergenInfoActive;
         },
 
-        toggleCheckbox(ingredient) {
-            ingredient.checked = !ingredient.checked;
-        },
+        // toggleCheckbox(ingredient) {
+        //     ingredient.checked = !ingredient.checked;
+        // },
 
         removeCheckedItems() {
 
             this.shoppingBag = this.shoppingBag.filter(item => !item.checked);
-
+            this.cartItemCount = this.shoppingBag.length; 
         },
 
         checkAll() {
