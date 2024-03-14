@@ -12,21 +12,22 @@ Vue.createApp({
     },
 
     methods: {
-        //metod för att hämta bilderna från bild-mappen
         getImagePath(imageFileName) {
 
             return `./foodImages/${imageFileName}`;
         },
 
-        //metoder för att fetcha från json-filen och hitta recept
         async getStarters() {
             await this.fetchRecipes('starter');
+            this.$refs.scroll.scrollTop=0;
         },
         async getMainCourses() {
             await this.fetchRecipes('main course');
+            this.$refs.scroll.scrollTop=0;
         },
         async getDesserts() {
             await this.fetchRecipes('dessert');
+            this.$refs.scroll.scrollTop=0;
         },
         async fetchRecipes(category) {
 
