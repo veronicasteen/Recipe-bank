@@ -197,12 +197,82 @@ img {
     opacity: 1;  
 }
 
-@media (max-width: 1024px){
-    main, .food-container, header, .category-container{
+#shoppinglist-headline{
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 6px;
+    border-bottom:2px solid rgba(76, 76, 76, 0.685);
+    background: transparent;
+    margin-bottom: auto;
+}
+
+.shoppinglist-container {
+    width: 80%;
+    margin: auto;
+}
+
+#list-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);;
+}
+.shoppinglist-container li {
+    border-left: 2px solid rgba(76, 76, 76, 0.685);
+    border-right: 2px solid rgba(76, 76, 76, 0.685); 
+    background-color: rgba(255, 255, 255, 0.129);
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Sofia", cursive;
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    border-bottom:2px solid rgba(76, 76, 76, 0.685);
+}
+#checkbox-button {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(124, 112, 80, 0.212);
+    border: 2px solid rgba(124, 112, 80, 0.212);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    opacity: 0;
+}
+
+/* Checkboxen när den är markerad */
+#checkbox-button:checked {
+    background-color: black; /* Ändra färgen här */
+    border-color: black; /* Kan också ändras om önskat */
+}
+
+.shoppinglist-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shoppinglist-buttons button {
+    border: none;
+    padding: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    border:2px solid rgba(124, 112, 80, 0.212);
+    background-color: hsla(38, 31%, 5%, 0.122);
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.shoppinglist-container button:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* @media (max-width: 1024px){
+    main, .food-container, header, .category-container, .shoppinglist-container li{
         width: 85%;}
-    }
+    } */
 @media (max-width: 650px){
-    main, .food-container, header, .category-container{
+    main, .food-container, header, .category-container, .shoppinglist-container li{
         width: 100%;}
  
         .button-section{
@@ -215,10 +285,15 @@ img {
             display: grid;
             grid-template-columns: 1fr;
             }
+            h1{
+                font-size: 50px;
+            }
+            .preparation-time{
+                font-size: 15px;
+            }
+            .food-container {
+                overflow-y:unset;
+                height: auto;
+            }
         }
-        h1{
-            font-size: 50px;
-        }
-        .preparation-time{
-            font-size: 15px;
-        }
+

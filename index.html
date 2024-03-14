@@ -11,6 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Sofia&display=swap"
         rel="stylesheet">
@@ -66,22 +67,21 @@
             </div>
         </section>
 
-        <section v-if="showShoppingList" class="shopping-list">
-            <h3>Shopping list</h3>
-            <div v-for="item in shoppingBag">
+        <section v-if="showShoppingList" class="shoppinglist-container">
+            <h3 id="shoppinglist-headline">Shopping list</h3>
+            <div id="list-container" v-for="item in shoppingBag">
                 <ul>
                     <li>
-                        <label :for="'chosen-item-' + item.title">
-                            <input type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
-                            {{ item.title }}: {{ item.gram }} g
-                        </label>
+                        <input type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
+                        <label id="checkbox-button" :for="'chosen-item-' + item.title">{{ item.title }}: {{ item.gram }} g</label>
                     </li>
                 </ul>
             </div>
-
-            <button @click="copyShoppingList">Copy all</button>
-            <button @click="checkAll">Mark all</button>
-            <button @click="removeCheckedItems">Remove marked items</button>
+            <div class="shoppinglist-buttons">
+                <button @click="copyShoppingList">Copy all</button>
+                <button @click="checkAll">Mark all</button>
+                <button @click="removeCheckedItems">Remove marked items</button>
+            </div>
         </section>
     </div>
     
