@@ -6,7 +6,8 @@
  
 html{
     background-image: url(backround-image.jpg);
-    background-size:100%;
+    background-size:cover;
+    background-attachment: fixed;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -17,8 +18,9 @@ header {
     background-image: url(backround-image.jpg);
     background-size:45%;
     box-shadow: 0px 0px 15px rgb(122, 93, 82);
+    border:1px solid rgb(138, 123, 79);
     padding: 15px;
-    width: 70%;
+    width: 800px;
     margin: auto;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -29,14 +31,15 @@ h1 {
     text-align: center;
     font-weight: 100;
     font-size: 70px;
-    
+    width: 100%;
+    /* font-size: 6vw; */
 }
  
 .category-container {  
     background-color:rgba(244, 244, 244, 0.485);
     box-shadow: 0px 0px 15px rgba(124, 112, 80, 0.649);
     padding: 20px;
-    width: 70%;
+    width: 800px;
     margin: auto;
     position: relative;
 }
@@ -45,15 +48,16 @@ h2 {
     font-weight: 400;
     text-align: center;
     margin-bottom: 1rem;
-    width: 100%;
 }
 #cart-button {
+    height: 1px; /* Endast för tester*/
+    width: 1; /* Endast för tester*/
     font-family: 'Material Symbols Outlined';
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     font-size: 34px;
     margin-right: 5px;
     position: absolute; /* Set absolute positioning */
-    top: 10px; /* Adjust top position as needed */
+    top: 15px; /* Adjust top position as needed */
     right: 40px; /* Adjust right position as needed */
     border:none;
     color:rgba(0, 0, 0, 0.864);
@@ -70,7 +74,6 @@ h2 {
     position: absolute;
     top: 0;
     right:0;
-    /* background-color: rgba(198, 155, 108, 0.755);  */
     background-color: rgba(3, 3, 3, 0.755);
     color: white;
     font-size: 10px;
@@ -121,7 +124,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 800px;
     height: 340px;
     gap: 30px;
     text-align: center;
@@ -229,36 +232,37 @@ img {
     border-bottom:2px solid rgba(76, 76, 76, 0.685);
 }
 
-#checkbox-button {
-    width: 2.1em;
-    height: 2.1em;
+.checkbox-button {
+    width: 30px;
+    height: 30px;
     margin-right: 20px;
     border: 1px solid #ddd;
     background-color:  rgba(87, 76, 45, 0.105);
-    border-radius: 50%;
-    vertical-align: middle;
+    border-radius: 50%;    
     -webkit-appearance: none;
     appearance: none;
     outline: none;
     cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
 }
-#checkbox-button::before{
+.checkbox-button::before{
     content: "\2713";
     color: rgb(59, 53, 36);
     font-size: 24px;
     font-weight: 400;
     position: absolute;
-    top: 50%;
-    left: 24px;
+    top: 12px;
+    left: 12px;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.2s ease;
 }
 
-#checkbox-button:checked::before {
+.checkbox-button:checked::before {
     opacity: 1;
 }
-#checkbox-button:checked {
+.checkbox-button:checked {
     transition: opacity 0.2s ease;
     border: 2px solid rgba(59, 53, 36, 0.519);
 }
@@ -267,12 +271,13 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    justify-content: space-evenly;
 }
 
 .shoppinglist-buttons button {
     border: none;
     padding: 4px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -287,35 +292,47 @@ img {
     background-color: rgba(255, 255, 255, 0);
 }
 
-/* @media (max-width: 1024px){
-    main, .food-container, header, .category-container, .shoppinglist-container li{
-        width: 85%;}
-    } */
-@media (max-width: 650px){
-    .food-container, header, .category-container, .shoppinglist-container li{
-        width: 100%;
-        
-    }
- 
-        .button-section{
-            font-size: 15px;
-            font-weight: 500;
-            width: 60%;
-            margin-right: auto;
-            margin-left: auto;
-            transition: all 0.8s ease;
-            display: grid;
-            grid-template-columns: 1fr;
-            }
-            h1{
-                font-size: 50px;
-            }
+@media (max-width: 800px){
+    main, .food-container, header, .category-container{
+        width: 98%;}
             .preparation-time{
-                font-size: 15px;
+                font-size: 15px; 
             }
             .food-container {
                 overflow-y:unset;
                 height: auto;
             }
         }
+
+@media (max-width: 500px){
+    h1{
+        font-size: 14vw; 
+    }
+    h2 {
+        margin:auto;
+    }
+    .button-section{
+        font-size: 15px;
+        font-weight: 500;
+        width:80%;
+        margin-right: auto;
+        margin-left: auto;
+        transition: all 1.8s ease;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #starters-button, #main-button, #dessert-button{
+         padding:6px;
+    }
+    #allergie-button{
+        font-size: 22px;
+    }
+}
+@media (max-width: 270px){
+    h1{
+        font-size: 13vw; 
+    }
+}
+        
+
 
