@@ -51,7 +51,7 @@ h2 {
 }
 #cart-button {
     height: 1px; /* Endast för tester*/
-    width: 1; /* Endast för tester*/
+    width: 1px; /* Endast för tester*/
     font-family: 'Material Symbols Outlined';
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     font-size: 34px;
@@ -81,13 +81,14 @@ h2 {
     border-radius: 50%;
     border:none;
 }
- 
+
 .button-section {
     text-align: center;
 }
 #starters-button, #main-button, #dessert-button {
     border: none;
     padding: 10px;
+    color:black;
     margin-right: 10px;
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
@@ -107,6 +108,8 @@ h2 {
     font-family: "Montserrat", sans-serif;
     margin-top: 10px;
     border-style: none;
+    background-color: none;
+    color:black;
     display: grid;
     grid-template-columns: 1fr;
     margin-left: auto;
@@ -159,6 +162,7 @@ h3 {
 #add-button {
     border:none;
     font-size: 16px;
+    color:black;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     padding-left: 10px;
@@ -275,6 +279,7 @@ img {
 }
 
 .shoppinglist-buttons button {
+    color:black;
     border: none;
     padding: 4px;
     /* margin-right: 10px; */
