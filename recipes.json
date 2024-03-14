@@ -29,7 +29,7 @@
       "mealType": "starter",
       "allergens": ["Gluten"],
       "preparationTime": "20 minutes",
-      "image": "bruschetta.jpg"
+      "image": "Bruschetta.jpg"
     },
     {
       "title": "Spinach and Artichoke Dip",
@@ -59,7 +59,7 @@
       "mealType": "starter",
       "allergens": ["Gluten", "Egg"],
       "preparationTime": "25 minutes",
-      "image": "caesar_salad.jpg"
+      "image": "Caesar_salad.jpg"
     },
     {
       "title": "Shrimp Cocktail",
@@ -236,7 +236,7 @@
       "mealType": "dessert",
       "allergens": ["Milk", "Gluten", "Eggs"],
       "preparationTime": "45 minutes",
-      "image": "tiramisu.jpg"
+      "image": "Tiramisu.jpg"
     },
     {
       "title": "Fruit Salad",
