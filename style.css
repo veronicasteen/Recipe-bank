@@ -108,7 +108,7 @@ h2 {
     font-family: "Montserrat", sans-serif;
     margin-top: 10px;
     border-style: none;
-    background-color: transparent;
+    background: none;
     color:black;
     display: grid;
     grid-template-columns: 1fr;
