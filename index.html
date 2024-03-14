@@ -72,16 +72,16 @@
             <div id="list-container" v-for="item in shoppingBag">
                 <ul>
                     <li>
-                        <input id="checkbox-button" type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
+                        <input class="checkbox-button" type="checkbox" v-model="item.checked" :id="'chosen-item-' + item.title">
                         <label :for="'chosen-item-' + item.title">
                             {{ item.title }}: {{ item.gram }} g</label>
                     </li>
                 </ul>
             </div>
             <div class="shoppinglist-buttons">
-                <button @click="copyShoppingList">Copy all</button>
-                <button @click="checkAll">Mark all</button>
-                <button @click="removeCheckedItems">Remove marked items</button>
+                <button @click="copyShoppingList">Copy list</button>
+                <button id="mark-all-button" @click="checkAll">Mark all</button>
+                <button id= "remove-button" @click="removeCheckedItems">Remove marked items</button>
             </div>
         </section>
     </div>

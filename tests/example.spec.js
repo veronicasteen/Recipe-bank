@@ -10,52 +10,66 @@ test('Add a recipe to cart with ingredients', async ({ page }) => {
 
   await page.click('#add-button');
 
-  const expectedItemCount = 7;
+  //Vi antar att det är första receptet som läggs till
+  //och i det är det sju ingredienser
+  let expectedItemCount = 7;
 
-  //hämta ingredienser som en sträng
-  const actualItemCountString = await page.textContent('#cart-count');
+  //hämta antalet ingredienser som en sträng
+  let actualItemCountString = await page.textContent('#cart-count');
 
   //konvertera
-  const actualItemCount = parseInt(actualItemCountString);
+  let actualItemCount = parseInt(actualItemCountString);
 
   //jämför
   expect(actualItemCount).toBe(expectedItemCount);;
 
 });
 
-// test('Delete an ingredient', async ({ page }) => {
+test('Delete an ingredient', async ({ page }) => {
   
-//   let startersButtonSelector = '#starters-button';
-
-//   await page.click(startersButtonSelector);
-
-//   let addButtonSelector = '#add-button';
-
-//   await page.click(addButtonSelector);
-
-//   await page.click('#cart-count');
-
-//   let shoppingBagLength = await page.$$eval('.shopping-list li', items => items.length);
-//   expect(shoppingBagLength).toBe(7);
+  await page.click('#starters-button');
+  await page.click('#add-button');
+  let expectedItemCount = 7;
   
-// });
-
-// test('Delete all ingredients', async ({ page }) => {
+  let actualItemCountString = await page.textContent('#cart-count');
+  let actualItemCount = parseInt(actualItemCountString);
+  expect(actualItemCount).toBe(expectedItemCount);
   
-//   let startersButtonSelector = '#starters-button';
 
-//   await page.click(startersButtonSelector);
+  let cartButton = page.locator('#cart-button');
 
-//   let addButtonSelector = '#add-button';
+  await cartButton.click()
 
-//   await page.click(addButtonSelector);
+  await page.click('.checkbox-button');
 
-//   let cartButtonSelector= '#cart-count';
+  await page.click("#remove-button");
 
-//   await page.click(cartButtonSelector)
-
-//   let shoppingBagLength = await page.$$eval('#cart-count', items => items.length);
-//   expect(shoppingBagLength).toBeGreaterThan(0);
+  let newExpectedItemCount = 6;
+  let newActualItemCountString = await page.textContent('#cart-count');
+  let newActualItemCount = parseInt(newActualItemCountString);
+  expect(newActualItemCount).toBe(newExpectedItemCount);
   
-// });
+});
+
+test('Delete all ingredients', async ({ page }) => {
+  
+  await page.click('#starters-button');
+  await page.click('#add-button');
+  let expectedItemCount = 7;
+  
+  let actualItemCountString = await page.textContent('#cart-count');
+  let actualItemCount = parseInt(actualItemCountString);
+  expect(actualItemCount).toBe(expectedItemCount);
+  
+  let cartButton = page.locator('#cart-button');
+
+  await cartButton.click()
+
+  await page.click('#mark-all-button');
+
+  await page.click("#remove-button");
+
+  page.locator('#cart-count').isHidden;
+
+});
 

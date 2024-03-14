@@ -64,8 +64,7 @@ Vue.createApp({
                 }
             });
             this.cartItemCount = this.shoppingBag.length; 
-            alert(this.cartItemCount);
-            alert(this.shoppingBag.length)
+            
         },
         
 
@@ -73,9 +72,6 @@ Vue.createApp({
             this.isAllergenInfoActive = !this.isAllergenInfoActive;
         },
 
-        // toggleCheckbox(ingredient) {
-        //     ingredient.checked = !ingredient.checked;
-        // },
 
         removeCheckedItems() {
 
@@ -95,11 +91,8 @@ Vue.createApp({
                 .join('\n');
 
             navigator.clipboard.writeText(shoppingListText)
-                .then(() => {
-
-                    alert('Your shopping-list has been copied.');
-                });
-        }
+               
+        },
 
     }
 })
