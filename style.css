@@ -58,10 +58,11 @@ h2 {
     margin-right: 5px;
     position: absolute; /* Set absolute positioning */
     top: 15px; /* Adjust top position as needed */
-    right: 40px; /* Adjust right position as needed */
+    right: 50px; /* Adjust right position as needed */
     border:none;
     color:rgba(0, 0, 0, 0.864);
-    transition: color 0.2s ease-in-out;
+    transition: color 0.2s, transform 0.20s ease-in-out;
+    
 } 
 #cart-button::before {
     content: '\e8cc';  /* Unicode-koden för önskad ikon */
@@ -69,7 +70,10 @@ h2 {
 }
 #cart-button:hover {
     color:hsla(43, 30%, 16%, 0.755);
+    transform:scale(1.04);
+
 } 
+
 #cart-count {
     position: absolute;
     top: 0;
@@ -100,6 +104,25 @@ h2 {
 }
 #starters-button:hover, #main-button:hover, #dessert-button:hover {
     background-color: rgba(255, 255, 255, 0);
+    transform: scale(1.03);
+}
+
+#vegan-button {
+    border: none;
+    padding: 10px;
+    color:black;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    border:6px solid rgba(11, 43, 1, 0.212);
+    background-color: hsla(108, 53%, 42%, 0.368);
+    transition: background-color 0.3s,transform 0.20s ease-in-out;
+    margin-top: 10px;
+
+}
+#vegan-button:hover {
+    background-color: rgba(10, 255, 6, 0.108);
     transform: scale(1.03);
 }
 #allergie-button{
@@ -229,7 +252,7 @@ img {
     background-color: rgba(255, 255, 255, 0.129);
     padding: 10px;
     font-size: 18px;
-    font-family: "Sofia", cursive;
+    font-family: "Sofia";
     list-style-type: none;
     display: flex;
     position: relative;
@@ -260,14 +283,14 @@ img {
     left: 12px;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.1s ease;
 }
 
 .checkbox-button:checked::before {
     opacity: 1;
 }
 .checkbox-button:checked {
-    transition: opacity 0.2s ease;
+    transition: opacity 0.1s ease;
     border: 2px solid rgba(59, 53, 36, 0.519);
 }
 
@@ -326,8 +349,8 @@ img {
         display: grid;
         grid-template-columns: 1fr;
     }
-    #starters-button, #main-button, #dessert-button{
-         padding:6px;
+    #starters-button, #main-button, #dessert-button, #vegan-button{
+         padding:3px;
     }
     #allergie-button{
         font-size: 22px;
