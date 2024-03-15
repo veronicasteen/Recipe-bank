@@ -69,6 +69,8 @@ test('Delete all ingredients', async ({ page }) => {
 
   await page.click("#remove-button");
 
+  //eftersom #cart-count automatiskt förvinner när cartItemCount = 0
+  //testar vi cart-counts visability och kan bekäfta att cartItemCount = 0
   page.locator('#cart-count').isHidden;
 
 });

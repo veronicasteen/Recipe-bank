@@ -247,6 +247,7 @@
         {"name": "Mint", "gram": 10}
       ],
       "mealType": "dessert",
+      "allergens": ["None"],
       "preparationTime": "15 minutes",
       "image": "fruit_salad.jpg"
     },
@@ -261,7 +262,7 @@
         {"name": "Pepper", "gram": 5}
       ],
       "mealType": "vegan",
-      "allergens": [],
+      "allergens": ["None"],
       "preparationTime": "10 minutes",
       "image": "avocado_toast.jpg"
     },
@@ -277,7 +278,7 @@
         {"name": "Pepper", "gram": 5}
       ],
       "mealType": "vegan",
-      "allergens": [],
+      "allergens": ["None"],
       "preparationTime": "30 minutes",
       "image": "green_pea_soup.jpg"
     },
@@ -310,7 +311,7 @@
         {"name": "Pepper", "gram": 5}
       ],
       "mealType": "vegan",
-      "allergens": [],
+      "allergens": ["None"],
       "preparationTime": "40 minutes",
       "image": "veggie_burger.jpg"
     },
@@ -338,7 +339,7 @@
         {"name": "Vanilla Extract", "gram": 5}
       ],
       "mealType": "vegan",
-      "allergens": [],
+      "allergens": ["None"],
       "preparationTime": "20 minutes",
       "image": "chocolate_avocado_pudding.jpg"
     } 
