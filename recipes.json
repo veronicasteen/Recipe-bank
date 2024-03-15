@@ -249,6 +249,99 @@
       "mealType": "dessert",
       "preparationTime": "15 minutes",
       "image": "fruit_salad.jpg"
-    }
+    },
+    {
+      "title": "Avocado Toast",
+      "ingredients": [
+        {"name": "Avocado", "gram": 150},
+        {"name": "Whole Grain Bread", "gram": 100},
+        {"name": "Cherry Tomatoes", "gram": 50},
+        {"name": "Lemon Juice", "gram": 10},
+        {"name": "Salt", "gram": 5},
+        {"name": "Pepper", "gram": 5}
+      ],
+      "mealType": "vegan",
+      "allergens": [],
+      "preparationTime": "10 minutes",
+      "image": "avocado_toast.jpg"
+    },
+    {
+      "title": "Green Pea Soup",
+      "ingredients": [
+        {"name": "Green Peas", "gram": 200},
+        {"name": "Onion", "gram": 50},
+        {"name": "Potato", "gram": 100},
+        {"name": "Vegetable Stock", "gram": 250},
+        {"name": "Coconut Milk", "gram": 100},
+        {"name": "Salt", "gram": 5},
+        {"name": "Pepper", "gram": 5}
+      ],
+      "mealType": "vegan",
+      "allergens": [],
+      "preparationTime": "30 minutes",
+      "image": "green_pea_soup.jpg"
+    },
+    {
+      "title": "Veggie Stir Fry",
+      "ingredients": [
+        {"name": "Broccoli", "gram": 150},
+        {"name": "Carrots", "gram": 100},
+        {"name": "Bell Pepper", "gram": 100},
+        {"name": "Tofu", "gram": 200},
+        {"name": "Soy Sauce", "gram": 20},
+        {"name": "Garlic", "gram": 10},
+        {"name": "Ginger", "gram": 10}
+      ],
+      "mealType": "vegan",
+      "allergens": ["Soy"],
+      "preparationTime": "25 minutes",
+      "image": "veggie_stir_fry.jpg"
+    },
+    {
+      "title": "Veggie Burger",
+      "ingredients": [
+        {"name": "Black Beans", "gram": 200},
+        {"name": "Quinoa", "gram": 100},
+        {"name": "Onion", "gram": 50},
+        {"name": "Tomato", "gram": 50},
+        {"name": "Lettuce", "gram": 30},
+        {"name": "Whole Wheat Burger Buns", "gram": 100},
+        {"name": "Salt", "gram": 5},
+        {"name": "Pepper", "gram": 5}
+      ],
+      "mealType": "vegan",
+      "allergens": [],
+      "preparationTime": "40 minutes",
+      "image": "veggie_burger.jpg"
+    },
+    {
+      "title": "Coconut Banana Balls",
+      "ingredients": [
+        {"name": "Banana", "gram": 100},
+        {"name": "Coconut Flakes", "gram": 50},
+        {"name": "Peanut Butter", "gram": 30},
+        {"name": "Maple Syrup", "gram": 20},
+        {"name": "Vanilla Extract", "gram": 5}
+      ],
+      "mealType": "vegan",
+      "allergens": ["Nuts"],
+      "preparationTime": "15 minutes",
+      "image": "coconut_banana_balls.jpg"
+    },
+    {
+      "title": "Chocolate Avocado Pudding",
+      "ingredients": [
+        {"name": "Avocado", "gram": 150},
+        {"name": "Cocoa Powder", "gram": 30},
+        {"name": "Maple Syrup", "gram": 20},
+        {"name": "Coconut Milk", "gram": 100},
+        {"name": "Vanilla Extract", "gram": 5}
+      ],
+      "mealType": "vegan",
+      "allergens": [],
+      "preparationTime": "20 minutes",
+      "image": "chocolate_avocado_pudding.jpg"
+    } 
+    
   ]
 }

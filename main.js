@@ -29,6 +29,10 @@ Vue.createApp({
             await this.fetchRecipes('dessert');
             this.$refs.scroll.scrollTop=0;
         },
+        async getDesserts() {
+            await this.fetchRecipes('vegan');
+            this.$refs.scroll.scrollTop=0;
+        },
         async fetchRecipes(category) {
 
             let response = await fetch('recipes.json');
