@@ -85,7 +85,9 @@ h2 {
     border-radius: 50%;
     border:none;
 }
-
+button {
+    cursor: pointer;
+}
 .button-section {
     text-align: center;
 }
@@ -101,6 +103,7 @@ h2 {
     background-color: hsla(43, 30%, 5%, 0.234);
     transition: background-color 0.3s,transform 0.20s ease-in-out;
     margin-top: 10px;
+    
 }
 #starters-button:hover, #main-button:hover, #dessert-button:hover {
     background-color: rgba(255, 255, 255, 0);
@@ -203,6 +206,8 @@ img {
     border:2px solid rgba(255, 255, 255, 0.212);
     width: 16rem;
     height: 13rem;
+    object-fit: cover;
+
 } 
 .preparation-time {
     position: absolute;
@@ -239,7 +244,7 @@ img {
 }
 
 .shoppinglist-container {
-    width: 80%;
+    width: 600px;
     margin: auto;
 }
 
@@ -249,7 +254,7 @@ img {
 .shoppinglist-container li {
     border-left: 2px solid rgba(76, 76, 76, 0.685);
     border-right: 2px solid rgba(76, 76, 76, 0.685); 
-    background-color: rgba(255, 255, 255, 0.129);
+    background-color: rgba(194, 188, 80, 0.232);
     padding: 10px;
     font-size: 18px;
     font-family: "Sofia";
@@ -263,8 +268,9 @@ img {
     width: 30px;
     height: 30px;
     margin-right: 20px;
-    border: 1px solid #ddd;
-    background-color:  rgba(87, 76, 45, 0.105);
+    border: 1px solid #00000077;
+    background-color:  rgba(34, 31, 20, 0.274);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);;
     border-radius: 50%;    
     -webkit-appearance: none;
     appearance: none;
@@ -299,6 +305,7 @@ img {
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
+    padding-bottom: 15px;
 }
 
 .shoppinglist-buttons button {
@@ -313,7 +320,6 @@ img {
     background-color: hsla(38, 31%, 5%, 0.122);
     transition: background-color 0.3s;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .shoppinglist-container button:hover {
@@ -329,6 +335,9 @@ img {
             .food-container {
                 overflow-y:unset;
                 height: auto;
+            }
+            .shoppinglist-container{
+                width: 90%;
             }
         }
 
