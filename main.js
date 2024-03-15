@@ -29,7 +29,7 @@ Vue.createApp({
             await this.fetchRecipes('dessert');
             this.$refs.scroll.scrollTop=0;
         },
-        async getDesserts() {
+        async getVegan() {
             await this.fetchRecipes('vegan');
             this.$refs.scroll.scrollTop=0;
         },
